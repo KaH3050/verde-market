@@ -1,0 +1,1947 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verde Market — Real fruit smoothies</title>
+<meta name="description" content="Smoothies, cold-pressed juices and wellness shots made with real fruit in Miami. Delivered cold.">
+<meta name="theme-color" content="#C7B5E6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232E8B4F'/%3E%3Cpath d='M9 23c0-9 6-14 15-14 0 9-6 14-14 14' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/acai-sheet.webp">
+<style>
+:root{--ink:#1D3524;--green:#2E8B4F;--green2:#23703F;--card:#fff;--muted:#5F6E63;--r:18px;
+  /* the whole page follows the flavour on the hero: --fl (pastel) and --fld (deep) are set by script */
+  --fl:#C7B5E6;--fld:#6B3FA0;
+  --cream:#FBF7EF;--cream:color-mix(in srgb,var(--fl) 30%,#FFF8EE);
+  --line:#E7E0D1;--line:color-mix(in srgb,var(--fl) 45%,#E7E0D1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;line-height:1.5;transition:background-color .8s ease}
+body.lock{overflow:hidden}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.hero :focus-visible{outline-color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+
+/* ================= HERO ================= */
+.hero{--u:1px;--fy:0px;--n:clamp(.5px,min(100vw / 1440,100vh / 900),1.3px);position:relative;height:100vh;height:100svh;min-height:420px;overflow:hidden;background:#C7B5E6;color:#fff;user-select:none;-webkit-user-select:none;touch-action:pan-y;transition:background-color .4s}
+.stage{position:absolute;inset:0;overflow:hidden}
+.slide{position:absolute;inset:0;overflow:hidden;visibility:hidden}
+.slide.on{visibility:visible;z-index:2}
+.frame{position:absolute;width:calc(1440*var(--u));height:calc(900*var(--u));left:calc(50% - 720*var(--u));top:calc(50% - 450*var(--u) + var(--fy))}
+.layer{position:absolute;inset:0;will-change:transform}
+.word{position:absolute;left:0;right:0;text-align:center;font-weight:700;line-height:1;white-space:nowrap;color:#fff}
+.shd{position:absolute;border-radius:50%;background:radial-gradient(closest-side,rgba(60,40,80,.22),rgba(60,40,80,0));filter:blur(calc(4*var(--u)))}
+.pc{position:absolute}
+.pc.mir{transform:scaleX(-1)}
+.pc>i{position:absolute;inset:0;background-repeat:no-repeat;transform:rotate(var(--r,0deg));animation:bob var(--d,4s) ease-in-out var(--dl,0s) infinite alternate}
+.pc.bottle>i{animation:none;transform:none}
+.cor .pc{filter:blur(calc(9*var(--u)))}
+@keyframes bob{from{transform:translateY(calc(-7*var(--u))) rotate(calc(var(--r,0deg) - 3deg))}to{transform:translateY(calc(7*var(--u))) rotate(calc(var(--r,0deg) + 3deg))}}
+
+.hui{position:absolute;inset:0;z-index:10;pointer-events:none;text-shadow:0 1px 6px rgba(90,70,40,.18)}
+.hui a,.hui button{pointer-events:auto;background:none;border:0;color:#fff;font:inherit;text-decoration:none;text-shadow:inherit}
+.hhead{position:absolute;left:calc(50*var(--n));right:calc(50*var(--n));top:calc(26*var(--n));height:calc(50*var(--n));display:flex;align-items:center}
+.hui .logo{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:calc(44*var(--n));letter-spacing:-.02em;line-height:1;display:flex;align-items:center;gap:.14em;white-space:nowrap}
+.logo svg{width:.78em;height:.78em;flex:none;filter:drop-shadow(0 1px 4px rgba(90,70,40,.18))}
+.tabs{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:calc(88*var(--n));font-weight:500;font-size:calc(21*var(--n));white-space:nowrap}
+.tabs button{padding:calc(6*var(--n)) 0;opacity:.92}
+.tabs button[aria-current="true"]{opacity:1}
+.uline{position:absolute;left:0;top:calc(100% + 2*var(--n));height:2px;width:0;border-radius:2px;background:#fff;box-shadow:0 1px 6px rgba(90,70,40,.18);transition:transform .6s cubic-bezier(.65,0,.35,1),width .6s cubic-bezier(.65,0,.35,1)}
+.acct{margin-left:auto;display:flex;gap:calc(22*var(--n));align-items:center;font-weight:500;font-size:calc(21*var(--n));white-space:nowrap}
+.acct .sep{opacity:.9}
+.hl{display:flex;gap:.35em;align-items:center}
+.hcart{display:flex;align-items:center;gap:4px}
+.hbag{display:none;width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round;filter:drop-shadow(0 1px 4px rgba(90,70,40,.2))}
+.hl button{opacity:.62}.hl button.on{opacity:1}
+.shopnow{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(36*var(--n));font-weight:600;font-size:calc(21*var(--n));letter-spacing:.2em;padding:calc(10*var(--n)) calc(16*var(--n));white-space:nowrap}
+.hbuy{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(104*var(--n));display:flex;align-items:center;gap:calc(12*var(--n));font-size:calc(18*var(--n));font-weight:500;white-space:nowrap;transition:opacity .25s}
+.hbuy b{font-weight:600}
+.hbuy.fade{opacity:0}
+.hbuy .hadd{background:#fff;color:var(--ink);text-shadow:none;border-radius:999px;padding:calc(10*var(--n)) calc(20*var(--n));font-weight:600;font-size:calc(16*var(--n));margin-left:calc(6*var(--n));box-shadow:0 6px 20px rgba(40,28,60,.14);transition:transform .2s}
+.hbuy .hadd:hover{transform:scale(1.05)}
+.hbuy .hadd:active{transform:scale(.95)}
+.arw{position:absolute;bottom:calc(30*var(--n));width:calc(52*var(--n));height:calc(52*var(--n));display:grid;place-items:center}
+.arw svg{width:calc(28*var(--n));height:calc(28*var(--n));fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 4px rgba(90,70,40,.2))}
+.arw.prev{left:calc(36*var(--n))}.arw.next{right:calc(36*var(--n))}
+.pre .frame,.pre .hu{opacity:0}
+@media (max-width:820px),(max-aspect-ratio:1/1){
+  .hero{--n:1px}
+  .hhead{left:20px;right:20px;top:16px;height:40px}
+  .hhead{top:72px}
+  .tabs{top:0;font-size:15px;gap:22px}
+  .shopnow{font-size:15px;bottom:22px}
+  .hbuy{bottom:70px;font-size:14px;gap:8px}
+  .hbuy .hadd{font-size:14px;padding:9px 16px;margin-left:4px}
+  .arw{width:48px;height:48px;bottom:12px}
+  .arw svg{width:24px;height:24px}
+  .arw.prev{left:8px}.arw.next{right:8px}
+}
+
+/* ================= STORE BAR ================= */
+/* one header for the whole page: transparent with white text over the hero, solid once the shop starts */
+.bar{position:fixed;top:0;left:0;right:0;z-index:40;background:transparent;border-bottom:1px solid transparent;transition:background-color .35s,border-color .35s,box-shadow .35s}
+.bar.solid{background:rgba(251,247,239,.92);background:color-mix(in srgb,var(--cream) 90%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom-color:var(--line);box-shadow:0 6px 20px -16px rgba(30,40,30,.4)}
+.barin{display:flex;align-items:center;gap:20px;height:68px;transition:height .35s}
+.bar:not(.solid){pointer-events:none}
+.bar:not(.solid) .blogo,.bar:not(.solid) .lang2,.bar:not(.solid) .bcart{pointer-events:auto}
+.bar:not(.solid) .barin{height:var(--bh0,68px)}
+.bar:not(.solid) .blogo{color:#fff;font-size:34px;text-shadow:0 1px 6px rgba(90,70,40,.18)}
+.bar:not(.solid) .blogo svg{width:28px;height:28px;filter:drop-shadow(0 1px 4px rgba(90,70,40,.18))}
+.bar:not(.solid) .search{opacity:0;visibility:hidden}
+.bar:not(.solid) .lang2{border-color:rgba(255,255,255,.7)}
+.bar:not(.solid) .lang2 button{color:#fff}
+.bar:not(.solid) .lang2 button.on{background:#fff;color:var(--ink)}
+.bar:not(.solid) .bcart .ccount{border-color:transparent}
+.blogo,.search,.lang2 button{transition:color .35s,font-size .35s,opacity .35s,visibility .35s,background-color .35s}
+.hero.pre~.bar{opacity:0}
+.blogo{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:26px;letter-spacing:-.02em;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.blogo svg{width:22px;height:22px}
+.search{flex:1;max-width:460px;margin-left:auto;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:0 16px;height:44px}
+.search svg{width:18px;height:18px;flex:none;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round}
+.search input{border:0;outline:0;background:none;width:100%;font-size:15px;min-width:0}
+.search:focus-within{border-color:var(--green)}
+.lang2{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.lang2 button{padding:8px 12px;font-size:13px;font-weight:600;color:var(--muted)}
+.lang2 button.on{background:var(--ink);color:#fff}
+.bacct{width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;flex:none;font-weight:700;font-size:17px;color:var(--ink);transition:background-color .35s,border-color .35s}
+.bacct[hidden]{display:none}
+.bacct svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round}
+.bacct.in{background:var(--green);border-color:var(--green);color:#fff}
+.bar:not(.solid) .bacct{pointer-events:auto;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.75)}
+.bar:not(.solid) .bacct svg{stroke:#fff}
+.bar:not(.solid) .bacct.in{background:var(--green);border-color:#fff}
+.bcart{position:relative;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;flex:none}
+.bcart svg{width:21px;height:21px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.bcart .ccount{position:absolute;top:-3px;right:-3px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:#FC734D;color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;border:2px solid var(--cream)}
+.bcart.bump{animation:bump .45s}
+@keyframes bump{40%{transform:scale(1.15)}}
+.perks{background:var(--fld);color:#fff;font-size:14px;font-weight:600;letter-spacing:.02em;overflow:hidden;transition:background-color .8s}
+.ptrack{display:flex;width:max-content;animation:marq 32s linear infinite}
+.perks span{display:flex;align-items:center;gap:14px;white-space:nowrap;padding:12px 26px 12px 0}
+.perks span::before{content:"";width:18px;height:18px;flex:none;background:#fff;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-9.5 6-15.5 16-15.5C20 14 14 20 4.8 20.2'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-9.5 6-15.5 16-15.5C20 14 14 20 4.8 20.2'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.85}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ================= SHOP ================= */
+.shop{padding-top:64px;padding-bottom:80px;scroll-margin-top:68px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.shead h2{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:clamp(34px,5vw,56px);line-height:1.02;letter-spacing:-.02em;margin:6px 0 10px}
+.shead p.sub{color:var(--muted);max-width:560px}
+.cats{display:flex;gap:10px;margin:28px 0 26px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.cats::-webkit-scrollbar{display:none}
+.cats button{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font-size:14px;font-weight:500;display:flex;gap:8px;align-items:center;transition:background .2s,color .2s,border-color .2s}
+.cats button small{font-size:12px;color:var(--muted)}
+.cats button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.cats button.on small{color:#B9C9BC}
+.slay{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
+.filters{position:sticky;top:92px}
+.fhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.fhead h3{font-size:18px;font-weight:600}
+.fclose,.fapply{display:none}
+.filters fieldset{border:0;border-top:1px solid var(--line);padding:18px 0 16px}
+.filters legend{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);float:left;width:100%;margin-bottom:10px}
+.opt{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:15px;cursor:pointer;clear:both}
+.opt input{width:18px;height:18px;accent-color:var(--green);flex:none}
+.opt .dot{width:14px;height:14px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.opt small{margin-left:auto;color:var(--muted);font-size:12px}
+.range{clear:both}
+.range input{width:100%;accent-color:var(--green)}
+.range output{display:block;font-size:14px;color:var(--muted);margin-top:4px}
+.fclear{margin-top:6px;font-size:14px;font-weight:600;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.tool{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.tool .count{font-size:14px;color:var(--muted)}
+.fbtn{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600}
+.fbtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.sort{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.sort select{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font-size:14px;color:var(--ink);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chips:empty{display:none}
+.chips button{display:flex;align-items:center;gap:6px;background:#EAF1E4;color:var(--green2);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500}
+.chips button::after{content:"×";font-size:16px;line-height:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.card{background:#fff;background:color-mix(in srgb,var(--c,#fff) 22%,#fff);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(40,30,20,.05);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(29,53,36,.35)}
+.cimg{position:relative;display:block;width:100%;text-align:left}
+.badge{position:absolute;top:12px;left:12px;z-index:3;background:#fff;color:var(--ink);font-size:11px;font-weight:600;letter-spacing:.04em;border-radius:999px;padding:4px 10px}
+.badge.new{background:var(--ink);color:#fff}
+.cbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.ctype{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cbody h3{font-size:16px;font-weight:600;line-height:1.3}
+.cbody h3 button{text-align:left;font-weight:inherit}
+.cdesc{font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.stars{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.stars b{color:#E8A317;font-size:13px}
+.cfoot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px}
+.price{font-weight:600;font-size:16px}
+.price small{font-weight:400;font-size:12px;color:var(--muted);margin-right:3px}
+.qadd{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex:none;transition:background .2s,transform .2s}
+.qadd:hover{background:var(--green2);transform:scale(1.06)}
+.qadd svg{width:18px;height:18px;stroke:#fff;stroke-width:2.4;stroke-linecap:round;fill:none}
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty h3{color:var(--ink);font-size:20px;margin-bottom:6px}
+.empty button{margin-top:16px}
+
+/* product art (built from the cut-out sheets) */
+.art{position:relative;aspect-ratio:1/1;overflow:hidden;width:100%}
+.art .cp{position:absolute;background-repeat:no-repeat;display:block}
+.art .ash{position:absolute;border-radius:50%;background:radial-gradient(closest-side,rgba(60,40,80,.2),rgba(60,40,80,0))}
+.art img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ================= BUILD A KIT ================= */
+.kit{padding:0 0 90px;scroll-margin-top:80px}
+.kitbox{display:grid;grid-template-columns:1fr 1fr;gap:44px;background:#F9CDA8;border-radius:28px;padding:44px}
+.kitbox .eyebrow{color:#A4501A}
+.kitl .sub,.kitbar{color:#6E4A2E}
+.h2b{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1.04;letter-spacing:-.02em;margin:6px 0 10px}
+.kitl .sub{color:var(--muted);max-width:460px}
+.crate{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;background:rgba(255,255,255,.45);border-radius:20px;padding:12px}
+.slot{position:relative;aspect-ratio:1/1;border-radius:14px;border:2px dashed rgba(164,80,26,.3);display:grid;place-items:center;color:rgba(164,80,26,.45);overflow:hidden;width:100%}
+.slot svg{width:26px;height:26px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.slot.on{border:0}
+.slot .art{position:absolute;inset:0;height:100%}
+.slot.new .art{animation:pop .45s cubic-bezier(.2,.9,.3,1.25)}
+@keyframes pop{from{transform:translateY(-14%) scale(.8);opacity:0}}
+.slot .rmx{position:absolute;top:6px;right:6px;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;font-size:16px;line-height:1;color:var(--ink);z-index:5}
+.kitbar{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;font-size:14px;color:var(--muted);gap:10px;flex-wrap:wrap}
+.kitbar b{color:var(--ink);font-size:20px}
+.kitbar s{margin-right:6px}
+.kitprog{height:6px;border-radius:3px;background:rgba(255,255,255,.55);margin-top:8px;overflow:hidden}
+.kitprog b{display:block;height:100%;background:var(--green);transition:width .3s}
+.kitbtns{display:flex;align-items:center;gap:18px;margin-top:18px;flex-wrap:wrap}
+.kitbtns .btn{flex:1;min-width:220px;height:50px}
+.lnk{font-size:14px;font-weight:600;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.kitr h3{font-size:16px;font-weight:600;margin-bottom:12px}
+.kitpick{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.kp{display:grid;grid-template-columns:60px 1fr auto;gap:12px;align-items:center;text-align:left;border:1.5px solid transparent;border-radius:14px;padding:8px 10px 8px 8px;background:#fff;transition:border-color .2s,background .2s}
+.kp:hover{border-color:var(--green);background:#F3F8F0}
+.kp .art{border-radius:10px}
+.kp b{display:block;font-size:14px;font-weight:600;line-height:1.25}
+.kp small{font-size:12px;color:var(--muted)}
+.kp i{font-style:normal;min-width:26px;height:26px;border-radius:13px;background:var(--green);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;padding:0 7px}
+.kp i.z{background:#fff;color:var(--green);box-shadow:inset 0 0 0 1.5px var(--green);font-size:16px}
+
+/* ================= QUIZ ================= */
+.quizcta{padding:0 0 90px}
+.qbox{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;background:#F4DC88;border-radius:28px;overflow:hidden}
+.qbox>div:first-child{padding:48px 52px}
+.qbox p{color:#5A4B1F;max-width:430px;margin-bottom:22px}
+.qbox .eyebrow{color:#7A5A12}
+.qart .art{aspect-ratio:1/1}
+.qz{width:min(660px,calc(100vw - 40px))}
+.qzin{padding:40px 36px 34px}
+.qzin h2{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:32px;line-height:1.1;margin:6px 0 20px}
+.qopts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qopts button{border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:18px 16px;text-align:left;font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px;transition:border-color .2s,background .2s}
+.qopts button:hover{border-color:var(--green);background:#F3F8F0}
+.qopts .dot{width:16px;height:16px;border-radius:50%;flex:none}
+.qdots{display:flex;gap:6px;margin-top:22px}
+.qdots i{width:28px;height:4px;border-radius:2px;background:var(--line)}
+.qdots i.on{background:var(--green)}
+.qback{display:block;font-size:14px;color:var(--muted);text-decoration:underline;margin-top:16px}
+.qres{display:grid;grid-template-columns:210px 1fr;gap:24px;align-items:center}
+.qres .art{border-radius:18px}
+.qres h3{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:30px;line-height:1.05}
+.qres p{color:var(--muted);font-size:14px;margin:6px 0 0}
+.qres .qwhy{color:var(--green2);font-weight:500;margin:10px 0 16px}
+.qbtns{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.qalso{margin-top:26px}
+.qalso h4{font-size:15px;font-weight:600;margin-bottom:12px}
+.qalso .relg{grid-template-columns:repeat(2,minmax(0,150px))}
+
+/* ================= REVIEWS ================= */
+.revs{padding:0 0 90px}
+.rhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+.rsum{font-size:15px;color:var(--muted);display:flex;gap:10px;align-items:center}
+.rsum b,.rv .st,.prevs .st{color:#E8A317;letter-spacing:2px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;background:color-mix(in srgb,var(--c,#fff) 38%,#fff);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:12px}
+.rv p{font-size:15px}
+.rwho{display:flex;align-items:center;gap:10px;margin-top:auto}
+.rwho .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:600;color:#fff;flex:none}
+.rwho b{display:block;font-size:14px;font-weight:600}
+.rwho small{color:var(--muted);font-size:12px}
+.rwho button{margin-left:auto;font-size:12px;font-weight:600;background:#EAF1E4;color:var(--green2);border-radius:999px;padding:5px 10px;white-space:nowrap}
+.prevs{display:grid;gap:8px}
+.prevs h4{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.prevs div{background:#fff;border:1px solid #EFE9DD;border-radius:12px;padding:12px 14px;font-size:13px}
+.prevs div p{margin:4px 0}
+.prevs small{color:var(--muted)}
+
+/* ================= SUBSCRIBE + HOW ================= */
+.subs{padding:0 0 90px}
+.subbox{background:var(--ink);color:#fff;border-radius:28px;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden}
+.subtxt{padding:56px 52px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.subtxt .eyebrow{color:#9BD77B}
+.subtxt h2{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:clamp(32px,4vw,48px);line-height:1.02;letter-spacing:-.02em}
+.subtxt p{color:#C9D6CB;max-width:440px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;background:var(--green);color:#fff;font-weight:600;font-size:15px;padding:14px 24px;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--green2)}
+.btn.light{background:#fff;color:var(--ink)}
+.btn.light:hover{background:#EAF1E4}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.subtxt .btn{align-self:flex-start;margin-top:6px}
+.posters{display:grid;grid-template-columns:1fr 1fr}
+.posters img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1/1}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+.how div{background:var(--hc);border-radius:var(--r);padding:26px}
+.how div:nth-child(1){--hc:#E3D9F3;--hd:#6B3FA0}
+.how div:nth-child(2){--hc:#D9EECB;--hd:#3F8A2E}
+.how div:nth-child(3){--hc:#FCE3CC;--hd:#C0601A}
+.how p{color:#4F5A52}
+.how svg{width:34px;height:34px;stroke:var(--hd);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+.how h3{font-size:17px;font-weight:600;margin-bottom:4px}
+.how p{font-size:14px;color:var(--muted)}
+footer{background:#14261A;color:#C9D6CB;padding:56px 0 30px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer .blogo{color:#fff;margin-bottom:10px}
+footer h4{color:#fff;font-size:14px;margin-bottom:10px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.credit{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:13px;color:#8FA394;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.demob{display:inline-block;background:#FC734D;color:#fff;font-family:Poppins,sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;line-height:1;border-radius:6px;padding:4px 7px;vertical-align:middle;margin-left:4px}
+
+/* ================= ACCOUNT ================= */
+.apriv{font-size:12px;color:var(--muted);margin-top:10px}
+.danger{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.danger b{display:block;color:var(--ink);font-size:14px;margin-bottom:2px}
+.danger .lnk{color:#B23A24;margin-top:8px}
+.danger .row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.btn.red{background:#C2412D}
+.btn.red:hover{background:#A33424}
+.acm{width:min(560px,calc(100vw - 40px))}
+.acin{padding:40px 36px 32px}
+.acin h2{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:32px;line-height:1.1;margin:4px 0 6px}
+.asub{color:var(--muted);font-size:15px;margin-bottom:18px}
+.acin .fg{margin-top:6px}
+.acin .btn[type=submit]{width:100%;height:50px;margin-top:18px}
+.acin .msg{font-size:13px;margin-top:12px}
+.alinks{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px;font-size:14px;color:var(--muted)}
+.ademo{font-size:12px;color:var(--muted);margin-top:18px;text-align:center}
+.ahead{display:flex;align-items:center;gap:14px;padding-right:44px}
+.ahead .av{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700;font-size:20px;flex:none}
+.ahead h2{margin:0;font-size:26px}
+.ahead p{font-size:13px;color:var(--muted);word-break:break-all}
+.atabs{display:flex;gap:4px;background:#fff;border-radius:999px;padding:4px;margin:20px 0 16px}
+.atabs button{flex:1;padding:9px;border-radius:999px;font-weight:600;font-size:14px;color:var(--muted)}
+.atabs button.on{background:var(--ink);color:#fff}
+.ord{background:#fff;border-radius:16px;padding:14px 16px;margin-bottom:10px}
+.ordh{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.ordh b{font-size:15px}
+.ordd{font-size:12px;color:var(--muted);margin-top:2px}
+.stb{font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px;background:#EAF1E4;color:var(--green2);white-space:nowrap}
+.stb.s-cancelled{background:#F7E1DC;color:#A33A26}
+.stb.s-delivered{background:var(--ink);color:#fff}
+.ord ul{list-style:none;font-size:13px;color:#4F5A52;margin:10px 0;display:grid;gap:2px}
+.ordf{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:10px}
+.aempty{text-align:center;color:var(--muted);padding:26px 10px}
+.aempty h3{color:var(--ink);font-size:17px;margin-bottom:4px}
+.aempty .btn{margin-top:14px}
+.signout{margin-top:18px;font-size:14px;color:var(--muted);text-decoration:underline}
+.co-acct{background:#EAF1E4;color:var(--green2);border-radius:12px;padding:10px 12px;font-size:13px;margin:10px 0 4px}
+.co-acct .lnk{font-size:13px}
+.chk{display:flex;gap:8px;align-items:center;font-size:14px;margin-top:12px;cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--green)}
+
+/* ================= FLOATING FRUIT ================= */
+.shop,.kit,.revs,.subs,.quizcta,footer{position:relative}
+.deco:nth-of-type(3n){animation-name:float2}
+@keyframes float2{from{transform:translate(-6px,8px) rotate(var(--r))}to{transform:translate(6px,-10px) rotate(calc(var(--r) - 10deg))}}
+@media (max-width:1360px){.deco.side{display:none}}
+.deco{position:absolute;z-index:-1;pointer-events:none;background-repeat:no-repeat;filter:drop-shadow(0 14px 16px rgba(60,40,30,.16));animation:float var(--dd,6s) ease-in-out infinite alternate;transform:rotate(var(--r))}
+.deco.soft{filter:blur(3px)}
+@keyframes float{from{transform:translateY(-9px) rotate(var(--r))}to{transform:translateY(9px) rotate(calc(var(--r) + 7deg))}}
+
+/* ================= OVERLAYS ================= */
+.scrim{position:fixed;inset:0;background:rgba(15,28,19,.45);z-index:80;opacity:0;pointer-events:none;transition:opacity .3s}
+.scrim.on{opacity:1;pointer-events:auto}
+.modal{position:fixed;z-index:90;left:50%;top:50%;width:min(980px,calc(100vw - 40px));max-height:calc(100vh - 40px);overflow:auto;background:var(--cream);border-radius:26px;transform:translate(-50%,-46%);opacity:0;pointer-events:none;transition:opacity .3s,transform .35s cubic-bezier(.2,.8,.3,1);overscroll-behavior:contain}
+.modal.on{opacity:1;transform:translate(-50%,-50%);pointer-events:auto}
+.x{position:absolute;top:14px;right:14px;z-index:5;width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.x svg{width:18px;height:18px;stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+.pm{display:grid;grid-template-columns:1fr 1fr}
+.pm .pimg{border-radius:26px 0 0 26px;overflow:hidden}
+.pm .pimg .art{height:100%;aspect-ratio:auto;min-height:100%}
+.pinfo{padding:40px 38px 34px;display:flex;flex-direction:column;gap:14px}
+.pinfo h2{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:36px;line-height:1.05;letter-spacing:-.01em}
+.pinfo .pdesc{color:var(--muted);font-size:15px}
+.pprice{font-size:26px;font-weight:600;display:flex;align-items:baseline;gap:10px}
+.pprice s{font-size:16px;color:var(--muted);font-weight:400}
+.grp h4{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills label{cursor:pointer}
+.pills input{position:absolute;opacity:0;pointer-events:none}
+.pills span{display:block;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:9px 14px;font-size:14px;font-weight:500;transition:border-color .2s,background .2s}
+.pills span small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.pills input:checked+span{border-color:var(--green);background:#EEF6EA}
+.pills input:focus-visible+span{outline:2px solid var(--green);outline-offset:2px}
+.buyrow{display:flex;gap:12px;align-items:center;margin-top:4px}
+.qty{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;background:#fff;height:48px}
+.qty button{width:40px;height:100%;font-size:20px;line-height:1}
+.qty span{min-width:26px;text-align:center;font-weight:600}
+.buyrow .btn{flex:1;height:48px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;font-weight:500;background:#EAF1E4;color:var(--green2);border-radius:999px;padding:4px 10px}
+.pmeta{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px}
+.pmeta b{color:var(--ink);font-weight:600}
+.rel{padding:0 38px 34px;grid-column:1/-1}
+.rel h4{font-size:15px;font-weight:600;margin-bottom:12px}
+.relg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.relg button{text-align:left;background:#fff;border-radius:14px;overflow:hidden;border:0;font-size:13px;font-weight:500}
+.relg button span{display:block;padding:8px 10px}
+
+.drawer{position:fixed;z-index:90;top:0;right:0;bottom:0;width:min(440px,100vw);background:var(--cream);display:flex;flex-direction:column;transform:translateX(102%);transition:transform .4s cubic-bezier(.2,.8,.3,1);box-shadow:-20px 0 40px -20px rgba(0,0,0,.25)}
+.drawer.on{transform:none}
+.dhead{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line)}
+.dhead h2{font-size:20px;font-weight:600}
+.dhead .x{position:static;box-shadow:none;background:#fff}
+.dbody{flex:1;overflow:auto;padding:16px 22px;overscroll-behavior:contain}
+.dfoot{border-top:1px solid var(--line);padding:16px 22px 20px;background:#fff}
+.freebar{background:#fff;border-radius:14px;padding:12px 14px;font-size:13px;margin-bottom:14px;border:1px solid #EFE9DD}
+.freebar i{display:block;height:6px;border-radius:3px;background:#EDE7DA;margin-top:8px;overflow:hidden}
+.freebar i b{display:block;height:100%;background:var(--green);border-radius:3px;transition:width .4s}
+.line{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}
+.line .art{border-radius:12px}
+.line h3{font-size:14px;font-weight:600;line-height:1.3}
+.line p{font-size:12px;color:var(--muted)}
+.line .qty{height:34px;margin-top:8px;width:max-content}
+.line .qty button{width:32px;font-size:17px}
+.line .lp{text-align:right;font-weight:600;font-size:14px}
+.line .rm{display:block;margin-top:6px;margin-left:auto;font-size:12px;color:var(--muted);text-decoration:underline}
+.box{background:#fff;border:1px solid #EFE9DD;border-radius:14px;padding:14px;margin-top:14px}
+.box h4{font-size:14px;font-weight:600;margin-bottom:10px}
+.irow{display:flex;gap:8px}
+.irow input{flex:1;min-width:0;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;background:#fff}
+.irow input:focus{outline:0;border-color:var(--green)}
+.irow button{border-radius:10px;background:var(--ink);color:#fff;font-size:14px;font-weight:600;padding:0 14px}
+.msg{font-size:12px;margin-top:6px;color:var(--muted)}
+.msg.err{color:#C2412D}.msg.ok{color:var(--green2)}
+.ship{display:grid;gap:8px;margin-top:10px}
+.ship label{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;font-size:14px}
+.ship label:has(input:checked){border-color:var(--green);background:#F3F8F0}
+.ship input{accent-color:var(--green)}
+.ship small{display:block;color:var(--muted);font-size:12px}
+.ship b{font-weight:600}
+.sum{display:grid;gap:6px;font-size:14px}
+.sum div{display:flex;justify-content:space-between}
+.sum .tot{font-size:17px;font-weight:700;padding-top:6px;border-top:1px solid var(--line);margin-top:4px}
+.sum .muted{color:var(--muted)}
+.dfoot .btn{width:100%;margin-top:14px;height:50px}
+.dempty{text-align:center;padding:60px 10px;color:var(--muted)}
+.dempty svg{width:54px;height:54px;stroke:#B8C4B9;fill:none;stroke-width:1.4;margin-bottom:12px}
+.dempty h3{color:var(--ink);font-size:18px;margin-bottom:4px}
+.dempty .btn{margin-top:18px}
+
+.co{width:min(1020px,calc(100vw - 40px))}
+.cogrid{display:grid;grid-template-columns:1.25fr 1fr}
+.coform{padding:36px 36px 32px}
+.coform h2{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:32px;line-height:1.1}
+.demo{font-size:13px;background:#FFF3D6;color:#7A5A12;border-radius:12px;padding:10px 12px;margin:12px 0 6px}
+.coform fieldset{border:0;margin-top:20px}
+.coform legend{font-size:15px;font-weight:600;margin-bottom:10px}
+.fg{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.fld{grid-column:span 6;display:flex;flex-direction:column;gap:4px}
+.fld.h3{grid-column:span 3}.fld.h2{grid-column:span 2}.fld.h4{grid-column:span 4}
+.fld span{font-size:12px;font-weight:500;color:var(--muted)}
+.fld input{border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font-size:15px;background:#fff;width:100%}
+.fld input:focus{outline:0;border-color:var(--green)}
+.fld.bad input{border-color:#C2412D}
+.fld em{font-style:normal;font-size:12px;color:#C2412D;min-height:0}
+.paytabs{display:flex;gap:8px;margin-bottom:12px}
+.paytabs label{flex:1;cursor:pointer}
+.paytabs input{position:absolute;opacity:0;pointer-events:none}
+.paytabs span{display:block;text-align:center;border:1.5px solid var(--line);border-radius:12px;padding:10px 6px;font-size:14px;font-weight:600;background:#fff}
+.paytabs input:checked+span{border-color:var(--green);background:#EEF6EA}
+.paytabs input:focus-visible+span{outline:2px solid var(--green);outline-offset:2px}
+.coform .btn{width:100%;margin-top:22px;height:54px;font-size:16px}
+.coside{background:#fff;padding:36px 30px;border-radius:0 26px 26px 0;border-left:1px solid var(--line)}
+.coside h3{font-size:16px;font-weight:600;margin-bottom:8px}
+.coside .line{grid-template-columns:56px 1fr auto}
+.coside .sum{margin-top:16px}
+.done{padding:60px 40px;text-align:center;max-width:560px;margin:0 auto}
+.done .ok{width:70px;height:70px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin:0 auto 18px}
+.done .ok svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.done h2{font-family:"Baloo 2",Poppins,sans-serif;font-weight:800;font-size:36px;line-height:1.1;margin-bottom:10px}
+.done p{color:var(--muted)}
+.done .eta{background:#fff;border:1px solid #EFE9DD;border-radius:14px;padding:14px;margin:20px 0;font-size:14px}
+.toast{position:fixed;z-index:120;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:#fff;border-radius:999px;padding:12px 20px;font-size:14px;font-weight:500;display:flex;gap:10px;align-items:center;transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast button{pointer-events:auto;color:#9BD77B;font-weight:600;text-decoration:underline}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:980px){
+  .slay{grid-template-columns:1fr}
+  .filters{position:fixed;z-index:90;top:0;left:0;bottom:0;width:min(340px,88vw);background:var(--cream);padding:20px 22px 90px;overflow:auto;transform:translateX(-102%);transition:transform .35s cubic-bezier(.2,.8,.3,1)}
+  .filters.on{transform:none}
+  .fclose{display:grid;width:38px;height:38px;border-radius:50%;background:#fff;place-items:center}
+  .fclose svg{width:16px;height:16px;stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+  .fapply{display:block;position:fixed;bottom:0;left:0;width:min(340px,88vw);padding:14px 22px;background:var(--cream);border-top:1px solid var(--line)}
+  .filters:not(.on) .fapply{display:none}
+  .fapply .btn{width:100%}
+  .fbtn{display:inline-flex}
+  .subbox{grid-template-columns:1fr}
+  .subtxt{padding:40px 30px}
+  .pm{grid-template-columns:1fr}
+  .pm .pimg{border-radius:26px 26px 0 0}
+  .pm .pimg .art{aspect-ratio:1/1;height:auto}
+  .pinfo{padding:26px 24px}
+  .rel{padding:0 24px 26px}
+  .kitbox{grid-template-columns:1fr;gap:30px}
+  .qbox{grid-template-columns:1fr}
+  .qart{max-width:420px;width:100%;justify-self:center}
+  .rgrid{grid-template-columns:repeat(2,1fr)}
+  .cogrid{grid-template-columns:1fr}
+  .coside{border-radius:0 0 26px 26px;border-left:0;border-top:1px solid var(--line);padding:26px 24px}
+  .coform{padding:30px 24px}
+}
+@media (max-width:700px){
+  .wrap{padding:0 16px}
+  .barin{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:10px;gap:10px}
+  .blogo{font-size:22px;margin-right:auto}
+  .search{order:5;flex-basis:100%;max-width:none;height:42px}
+  .bar:not(.solid) .search{display:none}
+  .bar:not(.solid) .barin{height:auto}
+  .bar:not(.solid) .blogo{font-size:26px}
+  .bar:not(.solid) .blogo svg{width:22px;height:22px}
+  .lang2 button{padding:7px 10px}
+  .bcart,.bacct{width:40px;height:40px}
+  .barin{gap:8px}
+  .blogo,.bar:not(.solid) .blogo{font-size:20px;gap:5px}
+  .blogo svg,.bar:not(.solid) .blogo svg{width:18px;height:18px}
+  .lang2 button{padding:6px 9px;font-size:12px}
+  .acin{padding:30px 20px 26px}
+  .acin h2{font-size:28px}
+  .perks{font-size:13px}
+  .shop{padding-top:44px;scroll-margin-top:112px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .cbody{padding:10px 12px 12px}
+  .cbody h3{font-size:14px}
+  .cdesc{display:none}
+  .price{font-size:15px;white-space:nowrap;line-height:1.25}
+  .price small{display:block;margin:0}
+  .qadd{width:34px;height:34px}
+  .badge{top:8px;left:8px;font-size:10px;padding:3px 8px}
+  .tool{flex-wrap:wrap;gap:10px}
+  .tool .count{order:3;flex-basis:100%}
+  .sort span{display:none}
+  .how{grid-template-columns:1fr}
+  .kitbox{padding:24px 16px;border-radius:22px}
+  .deco{scale:.65}
+  .shop .deco{top:-34px!important;right:-52px!important}
+  .deco.soft{display:none}
+  .kitpick{grid-template-columns:1fr}
+  .kitbtns .btn{min-width:100%}
+  .qbox>div:first-child{padding:32px 22px}
+  .qzin{padding:30px 20px 26px}
+  .qzin h2{font-size:26px}
+  .qopts{grid-template-columns:1fr}
+  .qres{grid-template-columns:1fr}
+  .qres .art{max-width:200px}
+  .rgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none}
+  .rgrid::-webkit-scrollbar{display:none}
+  .rv{flex:0 0 84%;scroll-snap-align:start}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .fgrid>div:first-child{grid-column:1/-1}
+  .modal{width:100vw;max-height:100%;top:auto;bottom:0;left:0;border-radius:24px 24px 0 0;transform:translateY(40px)}
+  .modal.on{transform:none}
+  .pm .pimg{border-radius:24px 24px 0 0}
+  .relg{grid-template-columns:repeat(2,1fr)}
+  .pinfo h2{font-size:30px}
+  .fld.h3,.fld.h2,.fld.h4{grid-column:span 3}
+  .fld.city{grid-column:span 6}
+  .toast{bottom:16px;font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pc>i,.ptrack,.deco{animation:none}
+  .uline{transition:none}
+  .card,.modal,.drawer,.filters,.scrim,.toast{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero pre" id="top">
+  <div class="stage" id="stage"></div>
+  <div class="hui">
+    <div class="hhead">
+      <nav class="tabs hu" id="tabs" aria-label="Flavors"><span class="uline" id="uline"></span></nav>
+    </div>
+    <button type="button" class="arw prev hu" id="prev" data-ta="prevFl" aria-label="Previous flavor"><svg viewBox="0 0 28 28"><path d="M24 14H4M12 6l-8 8 8 8"/></svg></button>
+    <div class="hbuy hu" id="hbuy"><span id="hbName"></span><span aria-hidden="true">·</span><b id="hbPrice"></b><button type="button" class="hadd" id="hbAdd">+ <span data-t="addShort">Add to cart</span></button></div>
+    <a class="shopnow hu" href="#shop" data-t="shopnow">SHOP NOW</a>
+    <button type="button" class="arw next hu" id="next" data-ta="nextFl" aria-label="Next flavor"><svg viewBox="0 0 28 28"><path d="M4 14h20M16 6l8 8-8 8"/></svg></button>
+  </div>
+</header>
+
+<!-- ================= STORE BAR ================= -->
+<div class="bar">
+  <div class="wrap barin">
+    <a class="blogo" href="#top"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 20c0-9.5 6-15.5 16-15.5C20 14 14 20 4.8 20.2"/></svg>Verde Market</a>
+    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sr" data-t="searchL">Search products</span><input id="q" type="search" autocomplete="off" data-tp="search" placeholder="Search smoothies, juices…"></label>
+    <div class="lang2" role="group" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="pt">PT</button></div>
+    <button type="button" class="bacct" id="bacct" data-acct-open hidden aria-label="Sign in"></button>
+    <button type="button" class="bcart" data-open-cart data-ta="openCart" aria-label="Open cart"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg><span class="ccount">0</span></button>
+  </div>
+</div>
+<div class="perks"><div class="ptrack"><span data-t="perk1"></span><span data-t="perk2"></span><span data-t="perk3"></span><span data-t="perk4"></span></div></div>
+
+<!-- ================= SHOP ================= -->
+<main id="shop" class="wrap shop">
+  <div class="shead">
+    <p class="eyebrow" data-t="eyebrow"></p>
+    <h2 data-t="shopTitle"></h2>
+    <p class="sub" data-t="shopSub"></p>
+  </div>
+  <div class="cats" id="cats"></div>
+  <div class="slay">
+    <aside class="filters" id="filters" aria-label="Filters">
+      <div class="fhead"><h3 data-t="filters"></h3><button type="button" class="fclose" id="fclose" data-ta="close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+      <fieldset><legend data-t="flavor"></legend><div id="fFl"></div></fieldset>
+      <fieldset><legend data-t="diet"></legend><div id="fDiet"></div></fieldset>
+      <fieldset><legend data-t="price"></legend><div class="range"><input type="range" id="fMax" min="4" max="36" step="1" value="36" data-ta="price"><output id="fMaxOut"></output></div></fieldset>
+      <fieldset><legend data-t="rating"></legend><div id="fRate"></div></fieldset>
+      <button type="button" class="fclear" id="fclear" data-t="clear"></button>
+      <div class="fapply"><button type="button" class="btn" id="fapply"></button></div>
+    </aside>
+    <section class="results" aria-live="polite">
+      <div class="tool">
+        <button type="button" class="fbtn" id="fbtn"><svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span id="fbtnL"></span></button>
+        <p class="count" id="count"></p>
+        <label class="sort"><span data-t="sortby"></span><select id="sort"></select></label>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden><h3 data-t="emptyT"></h3><p data-t="emptyP"></p><button type="button" class="btn" id="emptyClear" data-t="clear"></button></div>
+    </section>
+  </div>
+</main>
+
+<!-- ================= BUILD A KIT ================= -->
+<section class="kit wrap" id="kit" aria-labelledby="kitTitle">
+  <div class="kitbox">
+    <div class="kitl">
+      <p class="eyebrow" data-t="kitEyebrow"></p>
+      <h2 class="h2b" id="kitTitle" data-t="kitTitle"></h2>
+      <p class="sub" data-t="kitSub"></p>
+      <div class="crate" id="crate"></div>
+      <div class="kitbar"><span id="kitProg"></span><span id="kitPrice"></span></div>
+      <div class="kitprog"><b id="kitBar"></b></div>
+      <div class="kitbtns"><button type="button" class="btn" id="kitAdd"></button><button type="button" class="lnk" id="kitRand" data-t="kitRand"></button><button type="button" class="lnk" id="kitClear" data-t="kitClear"></button></div>
+    </div>
+    <div class="kitr"><h3 data-t="kitPick"></h3><div class="kitpick" id="kitPick"></div></div>
+  </div>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section class="quizcta wrap" id="quizcta">
+  <div class="qbox">
+    <div>
+      <p class="eyebrow" data-t="quizEyebrow"></p>
+      <h2 class="h2b" data-t="quizTitle"></h2>
+      <p data-t="quizSub"></p>
+      <button type="button" class="btn" id="quizOpen" data-t="quizCta"></button>
+    </div>
+    <div class="qart" id="qart"></div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="revs wrap" id="reviews" aria-labelledby="revTitle">
+  <div class="rhead">
+    <div><p class="eyebrow" data-t="revEyebrow"></p><h2 class="h2b" id="revTitle" data-t="revTitle"></h2></div>
+    <p class="rsum"><b aria-hidden="true">★★★★★</b><span data-t="revSum"></span></p>
+  </div>
+  <div class="rgrid" id="rgrid"></div>
+</section>
+
+<!-- ================= SUBSCRIBE + HOW ================= -->
+<section class="subs wrap" id="subscribe">
+  <div class="subbox">
+    <div class="subtxt">
+      <p class="eyebrow" data-t="subEyebrow"></p>
+      <h2 data-t="subTitle"></h2>
+      <p data-t="subP"></p>
+      <a class="btn light" href="#shop" data-t="subCta"></a>
+    </div>
+    <div class="posters">
+      <img src="img/acai-poster.webp" alt="Açaí Berry smoothie bottle" loading="lazy" width="1254" height="1254">
+      <img src="img/green-poster.webp" alt="Green Detox smoothie bottle" loading="lazy" width="1254" height="1254">
+      <img src="img/mango-poster.webp" alt="Mango Sunrise smoothie bottle" loading="lazy" width="1254" height="1254">
+      <img src="img/passion-poster.webp" alt="Passion Fruit smoothie bottle" loading="lazy" width="1254" height="1254">
+    </div>
+  </div>
+  <div class="how">
+    <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><h3 data-t="how1t"></h3><p data-t="how1p"></p></div>
+    <div><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3 data-t="how2t"></h3><p data-t="how2p"></p></div>
+    <div><svg viewBox="0 0 24 24"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7H8a2.5 2.5 0 1 1 0-5c3 0 4 5 4 5zM12 7h4a2.5 2.5 0 1 0 0-5c-3 0-4 5-4 5z"/></svg><h3 data-t="how3t"></h3><p data-t="how3p"></p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><a class="blogo" href="#top"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 20c0-9.5 6-15.5 16-15.5C20 14 14 20 4.8 20.2"/></svg>Verde Market</a><p data-t="fTag"></p></div>
+      <div><h4 data-t="fShop"></h4><ul id="fcats"></ul></div>
+      <div><h4 data-t="fHelp"></h4><ul><li><a href="#kit" data-t="fk"></a></li><li><a href="#quizcta" data-t="fq"></a></li><li><a href="#subscribe" data-t="fh1"></a></li><li><a href="#subscribe" data-t="fh2"></a></li><li><a href="#top" data-t="fh3"></a></li></ul></div>
+    </div>
+    <div class="credit"><span>© 2026 Verde Market</span><span><span class="demob">DEMO</span> <span data-t="credit"></span></span></div>
+  </div>
+</footer>
+
+<!-- ================= OVERLAYS ================= -->
+<div class="scrim" id="scrim"></div>
+<div class="modal" id="pm" role="dialog" aria-modal="true" aria-labelledby="pmTitle"></div>
+<aside class="drawer" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <div class="dhead"><h2 id="cartTitle"><span data-t="cartTitle"></span> <span class="demob">DEMO</span></h2><button type="button" class="x" data-close data-ta="close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="dbody" id="cartBody"></div>
+  <div class="dfoot" id="cartFoot"></div>
+</aside>
+<div class="modal co" id="co" role="dialog" aria-modal="true" aria-labelledby="coTitle"></div>
+<div class="modal qz" id="quiz" role="dialog" aria-modal="true" aria-labelledby="qzTitle"></div>
+<div class="modal acm" id="acm" role="dialog" aria-modal="true" aria-labelledby="acTitle"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+(() => {
+"use strict";
+/* ============================================================
+   DATA
+   Each flavour uses one transparent "cut-out sheet" (img/*-sheet.webp, 1254×1254).
+   items = [x, y, width, height] of each piece inside the sheet:
+   0 = bottle, 1–3 = fruit pieces. To swap a sheet, replace the file and these boxes.
+   ============================================================ */
+const SHEET = 1254;
+const FL = {
+  acai:   {color:"#C7B5E6", deep:"#6B3FA0", sheet:"img/acai-sheet.webp",    poster:"img/acai-poster.webp",
+           items:[[192,21,312,609],[686,98,549,494],[64,734,514,397],[704,725,496,391]], dx:18,
+           // [item, x, y, width, rotation, mirror, layer(f = fruit, c = blurred corner)]
+           pieces:[[2,383,176,112,0,0,"f"],[3,962,232,128,-10,0,"f"],[1,286,468,146,-8,0,"f"],[2,1238,452,126,15,1,"f"],[3,976,592,120,24,0,"f"],[1,-15,590,255,0,0,"c"],[3,1282,40,200,0,0,"c"]]},
+  green:  {color:"#B6DD9E", deep:"#3F8A2E", sheet:"img/green-sheet.webp",   poster:"img/green-poster.webp",
+           items:[[220,17,312,620],[744,121,392,460],[82,698,481,488],[718,746,449,425]], dx:18,
+           pieces:[[3,388,172,118,-20,1,"f"],[1,962,226,126,0,0,"f"],[2,296,458,156,10,0,"f"],[3,1236,462,128,-25,0,"f"],[1,952,596,122,20,1,"f"],[2,-10,575,255,0,0,"c"],[1,1285,30,190,0,0,"c"]]},
+  mango:  {color:"#F8C59C", deep:"#D9731F", sheet:"img/mango-sheet.webp",   poster:"img/mango-poster.webp",
+           items:[[218,20,321,622],[700,130,498,437],[70,732,482,443],[742,740,422,450]], dx:18,
+           pieces:[[3,390,152,112,0,0,"f"],[2,968,212,126,-10,1,"f"],[1,296,474,150,12,0,"f"],[3,1246,462,128,20,0,"f"],[1,950,586,134,-12,0,"f"],[1,0,585,240,0,0,"c"],[2,1280,30,190,0,0,"c"]]},
+  passion:{color:"#F4DC88", deep:"#C99A0E", sheet:"img/passion-sheet.webp", poster:"img/passion-poster.webp",
+           items:[[214,17,327,627],[696,86,472,480],[62,708,504,475],[717,682,454,507]], dx:18,
+           pieces:[[2,382,148,112,0,0,"f"],[1,956,222,136,20,0,"f"],[3,288,455,150,-10,0,"f"],[2,1250,440,124,15,0,"f"],[1,962,576,140,-15,1,"f"],[3,-10,555,245,0,0,"c"],[1,1285,35,200,20,0,"c"]]}
+};
+const ORDER = ["acai","green","mango","passion"];
+const FLNAME = {en:{acai:"Açaí",green:"Green",mango:"Mango",passion:"Passion"}, pt:{acai:"Açaí",green:"Verde",mango:"Manga",passion:"Maracujá"}};
+
+const SIZES = {
+  smoothie:[["250","250 ml",6.49],["500","500 ml",9.99],["1000","1 L",16.99]],
+  juice:[["250","250 ml",5.99],["500","500 ml",9.49],["1000","1 L",15.99]],
+  shot:[["60","60 ml",3.49],["6x","6 × 60 ml",17.99]]
+};
+const DIETS = ["vegan","nosugar","protein","cfree"];
+const CATS = ["all","smoothie","juice","shot","pack"];
+
+/* product: id, cat, flavour (or list for packs), art, names, short desc, ingredients, tags, rating, reviews, badge, kcal, extra */
+const P = [
+ {id:"acai-berry",cat:"smoothie",fl:"acai",poster:1,n:{en:"Açaí Berry",pt:"Açaí Berry"},d:{en:"Thick, creamy açaí blended with blueberry and banana. Our best seller.",pt:"Açaí cremoso batido com mirtilo e banana. O nosso mais vendido."},i:{en:"Açaí, blueberry, banana, mint",pt:"Açaí, mirtilo, banana, hortelã"},tags:["vegan","nosugar","cfree"],r:4.9,rv:412,b:"best",kcal:190},
+ {id:"green-detox",cat:"smoothie",fl:"green",poster:1,n:{en:"Green Detox",pt:"Green Detox"},d:{en:"Kiwi, crisp green apple and lime with a handful of spinach.",pt:"Kiwi, maçã verde e limão com um punhado de espinafre."},i:{en:"Kiwi, green apple, lime, spinach, mint",pt:"Kiwi, maçã verde, limão, espinafre, hortelã"},tags:["vegan","nosugar","cfree"],r:4.8,rv:356,kcal:150},
+ {id:"mango-sunrise",cat:"smoothie",fl:"mango",poster:1,n:{en:"Mango Sunrise",pt:"Mango Sunrise"},d:{en:"Ripe mango, orange and pineapple. Sunshine in a bottle.",pt:"Manga madura, laranja e abacaxi. Um dia de sol na garrafa."},i:{en:"Mango, orange, pineapple, mint",pt:"Manga, laranja, abacaxi, hortelã"},tags:["vegan","nosugar","cfree"],r:4.8,rv:298,b:"best",kcal:180},
+ {id:"passion-fruit",cat:"smoothie",fl:"passion",poster:1,n:{en:"Passion Fruit",pt:"Maracujá"},d:{en:"Tangy passion fruit with orange and a squeeze of lemon.",pt:"Maracujá azedinho com laranja e um toque de limão."},i:{en:"Passion fruit, orange, lemon, mint",pt:"Maracujá, laranja, limão, hortelã"},tags:["vegan","nosugar","cfree"],r:4.7,rv:241,kcal:160},
+ {id:"acai-protein",cat:"smoothie",fl:"acai",add:1,n:{en:"Açaí Protein",pt:"Açaí Protein"},d:{en:"Açaí and banana with pea protein and almond butter. 20 g of protein.",pt:"Açaí e banana com proteína de ervilha e pasta de amêndoa. 20 g de proteína."},i:{en:"Açaí, banana, pea protein, almond butter, oat milk",pt:"Açaí, banana, proteína de ervilha, pasta de amêndoa, leite de aveia"},tags:["vegan","protein","cfree"],r:4.7,rv:133,b:"new",kcal:290},
+ {id:"green-power",cat:"smoothie",fl:"green",add:1,n:{en:"Green Power Protein",pt:"Green Power Protein"},d:{en:"Spinach, kiwi and avocado with plant protein. Post-workout favorite.",pt:"Espinafre, kiwi e abacate com proteína vegetal. Ótimo depois do treino."},i:{en:"Spinach, kiwi, avocado, pea protein, coconut water",pt:"Espinafre, kiwi, abacate, proteína de ervilha, água de coco"},tags:["vegan","protein","nosugar","cfree"],r:4.6,rv:88,kcal:260},
+ {id:"mango-lassi",cat:"smoothie",fl:"mango",n:{en:"Mango Lassi",pt:"Lassi de Manga"},d:{en:"Dairy-free lassi with mango, coconut yogurt and a pinch of cardamom.",pt:"Lassi sem lactose com manga, iogurte de coco e uma pitada de cardamomo."},i:{en:"Mango, coconut yogurt, cardamom, lime",pt:"Manga, iogurte de coco, cardamomo, limão"},tags:["vegan","cfree"],r:4.6,rv:97,kcal:210},
+ {id:"berry-beet",cat:"juice",fl:"acai",n:{en:"Berry Beet",pt:"Berry Beet"},d:{en:"Earthy beet balanced with apple, blueberry and lemon.",pt:"Beterraba equilibrada com maçã, mirtilo e limão."},i:{en:"Beet, apple, blueberry, lemon",pt:"Beterraba, maçã, mirtilo, limão"},tags:["vegan","nosugar","cfree"],r:4.5,rv:76,kcal:120},
+ {id:"green-glow",cat:"juice",fl:"green",n:{en:"Green Glow",pt:"Green Glow"},d:{en:"Celery, cucumber and kale with just enough apple.",pt:"Salsão, pepino e couve com só um pouco de maçã."},i:{en:"Celery, cucumber, kale, apple, lemon",pt:"Salsão, pepino, couve, maçã, limão"},tags:["vegan","nosugar","cfree"],r:4.7,rv:190,b:"best",kcal:90},
+ {id:"golden-carrot",cat:"juice",fl:"mango",n:{en:"Golden Carrot",pt:"Cenoura Dourada"},d:{en:"Carrot and orange with fresh ginger and turmeric.",pt:"Cenoura e laranja com gengibre fresco e cúrcuma."},i:{en:"Carrot, orange, ginger, turmeric",pt:"Cenoura, laranja, gengibre, cúrcuma"},tags:["vegan","nosugar","cfree"],r:4.6,rv:121,kcal:110},
+ {id:"citrus-sunrise",cat:"juice",fl:"passion",n:{en:"Citrus Sunrise",pt:"Citrus Sunrise"},d:{en:"Orange, grapefruit and passion fruit. Bright and zesty.",pt:"Laranja, toranja e maracujá. Refrescante e cítrico."},i:{en:"Orange, grapefruit, passion fruit",pt:"Laranja, toranja, maracujá"},tags:["vegan","nosugar","cfree"],r:4.5,rv:64,kcal:130},
+ {id:"kiwi-cooler",cat:"juice",fl:"green",n:{en:"Kiwi Cucumber Cooler",pt:"Kiwi com Pepino"},d:{en:"Light and hydrating, with kiwi, cucumber and mint.",pt:"Leve e hidratante, com kiwi, pepino e hortelã."},i:{en:"Kiwi, cucumber, mint, lime",pt:"Kiwi, pepino, hortelã, limão"},tags:["vegan","nosugar","cfree"],r:4.4,rv:52,b:"new",kcal:80},
+ {id:"pineapple-mint",cat:"juice",fl:"passion",n:{en:"Pineapple Mint",pt:"Abacaxi com Hortelã"},d:{en:"Cold-pressed pineapple with fresh mint and lime.",pt:"Abacaxi prensado a frio com hortelã fresca e limão."},i:{en:"Pineapple, mint, lime",pt:"Abacaxi, hortelã, limão"},tags:["vegan","nosugar","cfree"],r:4.6,rv:83,kcal:140},
+ {id:"purple-lemonade",cat:"juice",fl:"acai",n:{en:"Purple Carrot Lemonade",pt:"Limonada de Cenoura Roxa"},d:{en:"Purple carrot, lemon and a touch of agave.",pt:"Cenoura roxa, limão e um toque de agave."},i:{en:"Purple carrot, lemon, agave, water",pt:"Cenoura roxa, limão, agave, água"},tags:["vegan","cfree"],r:4.3,rv:41,b:"new",kcal:100},
+ {id:"yerba-citrus",cat:"juice",fl:"mango",n:{en:"Yerba Citrus",pt:"Yerba Cítrica"},d:{en:"Cold-brewed yerba mate with orange. A gentle caffeine kick.",pt:"Erva-mate gelada com laranja. Um pouco de cafeína para animar."},i:{en:"Yerba mate, orange, lemon",pt:"Erva-mate, laranja, limão"},tags:["vegan","nosugar"],r:4.4,rv:58,kcal:60},
+ {id:"ginger-shot",cat:"shot",fl:"passion",n:{en:"Ginger Lemon Shot",pt:"Shot de Gengibre e Limão"},d:{en:"A fiery wake-up of raw ginger and lemon.",pt:"Gengibre cru e limão para acordar de vez."},i:{en:"Ginger, lemon, cayenne",pt:"Gengibre, limão, pimenta-caiena"},tags:["vegan","nosugar","cfree"],r:4.8,rv:210,b:"best",kcal:20},
+ {id:"turmeric-shot",cat:"shot",fl:"mango",n:{en:"Turmeric Boost",pt:"Shot de Cúrcuma"},d:{en:"Turmeric, orange and black pepper.",pt:"Cúrcuma, laranja e pimenta-do-reino."},i:{en:"Turmeric, orange, black pepper",pt:"Cúrcuma, laranja, pimenta-do-reino"},tags:["vegan","nosugar","cfree"],r:4.7,rv:150,kcal:25},
+ {id:"wheatgrass-shot",cat:"shot",fl:"green",n:{en:"Wheatgrass Shot",pt:"Shot de Wheatgrass"},d:{en:"Pure wheatgrass with a splash of apple.",pt:"Wheatgrass puro com um pouco de maçã."},i:{en:"Wheatgrass, apple",pt:"Wheatgrass, maçã"},tags:["vegan","nosugar","cfree"],r:4.4,rv:61,kcal:15},
+ {id:"elderberry-shot",cat:"shot",fl:"acai",n:{en:"Elderberry Immunity",pt:"Shot de Sabugueiro"},d:{en:"Elderberry, açaí and a little raw honey.",pt:"Sabugueiro, açaí e um pouco de mel cru."},i:{en:"Elderberry, açaí, raw honey, lemon",pt:"Sabugueiro, açaí, mel cru, limão"},tags:["cfree"],r:4.6,rv:95,kcal:35},
+ {id:"matcha-shot",cat:"shot",fl:"green",n:{en:"Matcha Lime Shot",pt:"Shot de Matcha e Limão"},d:{en:"Ceremonial matcha with lime. Clean energy.",pt:"Matcha cerimonial com limão. Energia sem pesar."},i:{en:"Matcha, lime, coconut water",pt:"Matcha, limão, água de coco"},tags:["vegan","nosugar"],r:4.5,rv:40,b:"new",kcal:20},
+ {id:"rainbow-pack",cat:"pack",fl:["acai","green","mango","passion"],pack:["4 × 250 ml",23.99],n:{en:"Rainbow 4-Pack",pt:"Kit Arco-íris (4)"},d:{en:"One of each signature smoothie. The best way to find your favorite.",pt:"Um de cada smoothie da casa. O melhor jeito de achar o seu favorito."},i:{en:"Açaí Berry, Green Detox, Mango Sunrise, Passion Fruit",pt:"Açaí Berry, Green Detox, Mango Sunrise, Maracujá"},tags:["vegan","nosugar","cfree"],r:4.9,rv:188,b:"best",kcal:170},
+ {id:"green-week",cat:"pack",fl:["green","green","green"],pack:["6 × 250 ml",34.99],n:{en:"Green Week 6-Pack",pt:"Semana Verde (6)"},d:{en:"Three Green Detox and three Green Glow for a lighter week.",pt:"Três Green Detox e três Green Glow para uma semana mais leve."},i:{en:"Green Detox ×3, Green Glow ×3",pt:"Green Detox ×3, Green Glow ×3"},tags:["vegan","nosugar","cfree"],r:4.7,rv:72,kcal:120},
+ {id:"tropical-trio",cat:"pack",fl:["passion","mango","passion"],pack:["3 × 500 ml",27.49],n:{en:"Tropical Trio",pt:"Trio Tropical"},d:{en:"Mango Sunrise, Passion Fruit and Pineapple Mint in big bottles.",pt:"Mango Sunrise, Maracujá e Abacaxi com Hortelã em garrafas grandes."},i:{en:"Mango Sunrise, Passion Fruit, Pineapple Mint",pt:"Mango Sunrise, Maracujá, Abacaxi com Hortelã"},tags:["vegan","nosugar","cfree"],r:4.8,rv:66,b:"new",kcal:170},
+ {id:"berry-pack",cat:"pack",fl:["acai","acai","acai"],pack:["6 × 250 ml",34.99],n:{en:"Berry Lover 6-Pack",pt:"Kit Frutas Roxas (6)"},d:{en:"Açaí Berry, Açaí Protein and Berry Beet, two of each.",pt:"Açaí Berry, Açaí Protein e Berry Beet, dois de cada."},i:{en:"Açaí Berry ×2, Açaí Protein ×2, Berry Beet ×2",pt:"Açaí Berry ×2, Açaí Protein ×2, Berry Beet ×2"},tags:["vegan","cfree"],r:4.8,rv:54,kcal:200},
+ {id:"shot-kit",cat:"pack",fl:["passion","mango","green","acai"],art:"shots",pack:["8 × 60 ml",24.99],n:{en:"Shot Starter Kit",pt:"Kit de Shots"},d:{en:"Two of each wellness shot. A week of morning boosts.",pt:"Dois de cada shot funcional. Uma semana de energia pela manhã."},i:{en:"Ginger Lemon, Turmeric, Wheatgrass, Elderberry",pt:"Gengibre e Limão, Cúrcuma, Wheatgrass, Sabugueiro"},tags:["cfree"],r:4.7,rv:81,kcal:25}
+];
+P.forEach((p, i) => {
+  p.ord = i;
+  p.sizes = p.pack ? [["pack", p.pack[0], p.pack[1]]] : SIZES[p.cat].map(s => [s[0], s[1], +(s[2] + (p.add || 0)).toFixed(2)]);
+  p.from = p.sizes[0][2];
+  p.fls = Array.isArray(p.fl) ? [...new Set(p.fl)] : [p.fl];
+});
+const byId = Object.fromEntries(P.map(p => [p.id, p]));
+
+/* ============================================================ TEXT ============================================================ */
+const T = {
+ en:{cart:"Cart",shopnow:"SHOP NOW",prevFl:"Previous flavor",nextFl:"Next flavor",searchL:"Search products",search:"Search smoothies, juices…",openCart:"Open cart",
+  perk1:"Pressed fresh every morning",perk2:"Free delivery over $50",perk3:"Same-day delivery in Miami",perk4:"Real fruit, no added sugar",
+  eyebrow:"Fresh every morning",shopTitle:"Shop the market",shopSub:"Smoothies, cold-pressed juices, wellness shots and bundles, made in small batches in Miami.",
+  c_all:"All",c_smoothie:"Smoothies",c_juice:"Cold-pressed juices",c_shot:"Wellness shots",c_pack:"Bundles",
+  t_smoothie:"Smoothie",t_juice:"Cold-pressed juice",t_shot:"Wellness shot",t_pack:"Bundle",
+  filters:"Filters",flavor:"Flavor",diet:"Diet",price:"Price",rating:"Rating",upTo:"Up to {x}",any:"Any rating",starsUp:"{x} and up",
+  d_vegan:"Vegan",d_nosugar:"No added sugar",d_protein:"High protein",d_cfree:"Caffeine-free",
+  clear:"Clear all",showN:"Show {n} products",showOne:"Show 1 product",count:"{n} products",countOne:"1 product",sortby:"Sort by",
+  s_featured:"Featured",s_rating:"Top rated",s_low:"Price: low to high",s_high:"Price: high to low",s_new:"Newest",
+  emptyT:"Nothing matches those filters",emptyP:"Try removing a filter or searching for something else.",
+  from:"from",add:"Add {x} to cart",addToCart:"Add to cart",added:"Added to cart",view:"View cart",best:"Best seller",new:"New",
+  size:"Size",purchase:"Purchase",once:"One-time",sub:"Subscribe weekly",save15:"Save 15%",subNote:"Delivered every week. Skip or cancel anytime.",
+  qty:"Quantity",less:"Decrease quantity",more:"Increase quantity",ingredients:"Ingredients",kcal:"{n} kcal per serving",keep:"Keep refrigerated. Best within 5 days of delivery.",
+  related:"You may also like",reviews:"{n} reviews",close:"Close",
+  cartTitle:"Your cart",emptyCart:"Your cart is empty",emptyCartP:"Add a smoothie or two and we'll press them tomorrow morning.",startShopping:"Start shopping",
+  freeAway:"You're {x} away from free delivery",freeGot:"You've unlocked free delivery",remove:"Remove",weekly:"Weekly · 15% off",
+  shipTitle:"Delivery estimate",zipPh:"US ZIP code",calc:"Calculate",zipErr:"Enter a 5-digit US ZIP code.",zipNo:"We can't ship fresh juice to this area yet.",
+  m_local:"Same-day local delivery",e_local:"Today, 4–8 pm",m_std:"Standard cold-pack",e_std:"2–3 business days",m_exp:"Express overnight",e_exp:"Next business day",free:"Free",
+  coupon:"Promo code",apply:"Apply",couponOk:"FRESH10 applied: 10% off",couponBad:"That code isn't valid.",couponHint:"Demo tip: try FRESH10",
+  subtotal:"Subtotal",discount:"Discount",shipping:"Delivery",shipTbd:"Add ZIP",total:"Total",checkout:"Checkout",
+  coTitle:"Checkout",demoNote:"This is a demo store. No card is charged and nothing is shipped.",contact:"Contact",email:"Email",addrT:"Delivery address",
+  fname:"Full name",addr:"Street address",city:"City",state:"State",zip:"ZIP code",method:"Delivery method",methodNeed:"Enter a valid ZIP code to see delivery options.",
+  payment:"Payment",card:"Card",cardNum:"Card number",exp:"Expiry (MM/YY)",cvc:"CVC",cardHint:"Test card: 4242 4242 4242 4242",
+  wallet:"You'd confirm the payment in {w}. In this demo we skip that step.",place:"Place order · {x}",processing:"Processing…",
+  req:"Required",badEmail:"Enter a valid email.",badCard:"Enter the 16 digits of the card.",badExp:"Use MM/YY.",badCvc:"3 or 4 digits.",badState:"Use the 2-letter state code.",
+  summary:"Order summary",doneT:"Thanks, {name}!",doneP:"Order {id} is confirmed. We'll press your drinks fresh and send tracking to {email}.",eta:"Estimated delivery",keepShopping:"Keep shopping",
+  subEyebrow:"Subscribe & save",subTitle:"Your weekly fridge, sorted.",subP:"Pick any mix of drinks, choose weekly delivery and save 15% on every order. Skip a week or cancel anytime.",subCta:"Build my box",
+  how1t:"Pressed at dawn",how1p:"We press in small batches every morning, so nothing sits on a shelf.",how2t:"Delivered cold",how2p:"Insulated packaging keeps every bottle chilled all the way to your door.",how3t:"Free over $50",how3p:"Same-day delivery in Miami and 2–3 days anywhere in the lower 48.",
+  fTag:"Real fruit smoothies, pressed in Miami.",fShop:"Shop",fHelp:"Help",fh1:"Shipping & delivery",fh2:"Subscriptions",fh3:"Contact",credit:"Concept store designed by KYNEX. Products and orders are fictional.",
+  addShort:"Add to cart",fk:"Build a kit",fq:"Flavor quiz",
+  kitEyebrow:"Build your own",kitTitle:"Mix a 6-pack, save 15%",kitSub:"Pick any six 250 ml bottles. Mix flavors, double up on favorites, and we'll pack them cold.",
+  kitPick:"Choose your bottles",kitProg:"{n} of 6 picked",kitSave:"you save {x}",kitMore:"Pick {n} more",kitMoreOne:"Pick 1 more",kitAddBtn:"Add kit to cart · {x}",
+  kitRand:"Surprise me",kitClear:"Clear",kitFull:"Your kit is full. Remove a bottle to swap it.",kitName:"Your 6-pack",kitRemove:"Remove {x} from the kit",kitAddOne:"Add {x} to the kit",kitAdded:"Kit added to cart",
+  quizEyebrow:"30-second quiz",quizTitle:"Not sure where to start?",quizSub:"Answer three quick questions and we'll match you with your bottle.",quizCta:"Find my flavor",
+  quizStep:"Question {n} of 3",back:"Back",quizResult:"Your match",quizWhy:"Picked for: {a}",quizAlso:"Also worth a try",viewProduct:"See details",retake:"Retake the quiz",
+  revEyebrow:"Reviews",revTitle:"Loved all over Miami",revSum:"4.8 average from 2,400+ reviews",revSay:"What people say",
+  signIn:"Sign in",myAccount:"My account",acctEyebrow:"Verde Market account",signInT:"Welcome back",signInSub:"Sign in to see your orders and check out faster.",
+  password:"Password",forgot:"Forgot password?",noAcct:"New here?",createAcct:"Create account",
+  signUpT:"Create your account",signUpSub:"Save your address, track your orders and reorder in one tap.",pwHint:"Use at least 8 characters.",haveAcct:"Already have an account?",
+  forgotT:"Reset your password",forgotSub:"Enter your email and we'll send you a link to set a new password.",sendLink:"Send reset link",resetSent:"If that email has an account, the link is on its way.",backSignIn:"Back to sign in",
+  resetT:"Choose a new password",newPw:"New password",savePw:"Save password",pwUpdated:"Password updated.",
+  hi:"Hi, {name}",hiNoName:"Hi there!",signOut:"Sign out",signedOut:"You're signed out.",tabOrders:"My orders",tabProfile:"Profile",loading:"Loading…",
+  noOrders:"No orders yet",noOrdersP:"Orders you place while signed in will show up here.",buyAgain:"Buy again",againDone:"Added to your cart again",
+  st_confirmed:"Confirmed",st_preparing:"Preparing",st_out_for_delivery:"Out for delivery",st_delivered:"Delivered",st_cancelled:"Cancelled",
+  phone:"Phone",saveProfile:"Save changes",saved:"Saved.",welcome:"You're in. Welcome to Verde Market!",checkEmail:"Check your inbox to confirm your email, then sign in.",
+  errLogin:"Email or password doesn't match.",errExists:"That email already has an account. Try signing in.",errRate:"Too many attempts. Please wait a minute and try again.",
+  errConfirm:"Please confirm your email first.",errNet:"We couldn't reach the account service. Please try again in a moment.",errGeneric:"Something went wrong. Please try again.",errPerm:"Your account doesn't have permission to save this yet.",
+  coSignedIn:"Signed in as {email}. This order will be saved to your account.",coGuest:"Have an account? Sign in to save this order and check out faster.",
+  saveAddr:"Save this address to my account",viewOrders:"See my orders",saveFail:"Your order went through, but we couldn't save it to your account.",
+  acctDemo:"Demo store: your account is real, payments are simulated.",
+  notTestCard:"Demo store: please use a test card, like 4242 4242 4242 4242.",useTest:"Use test card",
+  privacy:"This is a demo store. We only use your details for your account, and you can delete your account at any time.",
+  delTitle:"Delete account",delP:"Removes your profile and your whole order history. This can't be undone.",delBtn:"Delete my account",
+  delYes:"Yes, delete my account",cancel:"Cancel",deleted:"Your account and its data were deleted."},
+ pt:{cart:"Carrinho",shopnow:"COMPRAR",prevFl:"Sabor anterior",nextFl:"Próximo sabor",searchL:"Buscar produtos",search:"Buscar smoothies, sucos…",openCart:"Abrir carrinho",
+  perk1:"Prensado fresco toda manhã",perk2:"Frete grátis acima de US$ 50",perk3:"Entrega no mesmo dia em Miami",perk4:"Fruta de verdade, sem açúcar adicionado",
+  eyebrow:"Fresco toda manhã",shopTitle:"Conheça a loja",shopSub:"Smoothies, sucos prensados a frio, shots funcionais e kits, feitos em pequenos lotes em Miami.",
+  c_all:"Tudo",c_smoothie:"Smoothies",c_juice:"Sucos prensados a frio",c_shot:"Shots funcionais",c_pack:"Kits",
+  t_smoothie:"Smoothie",t_juice:"Suco prensado a frio",t_shot:"Shot funcional",t_pack:"Kit",
+  filters:"Filtros",flavor:"Sabor",diet:"Alimentação",price:"Preço",rating:"Avaliação",upTo:"Até {x}",any:"Qualquer nota",starsUp:"{x} ou mais",
+  d_vegan:"Vegano",d_nosugar:"Sem açúcar adicionado",d_protein:"Rico em proteína",d_cfree:"Sem cafeína",
+  clear:"Limpar tudo",showN:"Ver {n} produtos",showOne:"Ver 1 produto",count:"{n} produtos",countOne:"1 produto",sortby:"Ordenar por",
+  s_featured:"Destaques",s_rating:"Mais bem avaliados",s_low:"Menor preço",s_high:"Maior preço",s_new:"Novidades",
+  emptyT:"Nenhum produto com esses filtros",emptyP:"Tente tirar um filtro ou buscar outra coisa.",
+  from:"a partir de",add:"Adicionar {x} ao carrinho",addToCart:"Adicionar ao carrinho",added:"Adicionado ao carrinho",view:"Ver carrinho",best:"Mais vendido",new:"Novo",
+  size:"Tamanho",purchase:"Tipo de compra",once:"Compra única",sub:"Assinatura semanal",save15:"15% off",subNote:"Entrega toda semana. Pule ou cancele quando quiser.",
+  qty:"Quantidade",less:"Diminuir quantidade",more:"Aumentar quantidade",ingredients:"Ingredientes",kcal:"{n} kcal por porção",keep:"Mantenha na geladeira. Melhor consumir em até 5 dias.",
+  related:"Você também pode gostar",reviews:"{n} avaliações",close:"Fechar",
+  cartTitle:"Seu carrinho",emptyCart:"Seu carrinho está vazio",emptyCartP:"Escolha um ou dois smoothies e a gente prensa amanhã cedo.",startShopping:"Começar a comprar",
+  freeAway:"Faltam {x} para o frete grátis",freeGot:"Você ganhou frete grátis",remove:"Remover",weekly:"Semanal · 15% off",
+  shipTitle:"Calcular entrega",zipPh:"ZIP (código postal dos EUA)",calc:"Calcular",zipErr:"Digite um ZIP de 5 dígitos (EUA).",zipNo:"Ainda não entregamos sucos frescos nessa região.",
+  m_local:"Entrega local no mesmo dia",e_local:"Hoje, das 16h às 20h",m_std:"Padrão com embalagem térmica",e_std:"2 a 3 dias úteis",m_exp:"Expressa",e_exp:"Próximo dia útil",free:"Grátis",
+  coupon:"Cupom",apply:"Aplicar",couponOk:"FRESH10 aplicado: 10% de desconto",couponBad:"Esse cupom não é válido.",couponHint:"Dica da demo: use FRESH10",
+  subtotal:"Subtotal",discount:"Desconto",shipping:"Entrega",shipTbd:"Informe o ZIP",total:"Total",checkout:"Finalizar compra",
+  coTitle:"Finalizar compra",demoNote:"Esta é uma loja de demonstração. Nenhum cartão é cobrado e nada é enviado.",contact:"Contato",email:"E-mail",addrT:"Endereço de entrega",
+  fname:"Nome completo",addr:"Endereço",city:"Cidade",state:"Estado",zip:"ZIP (código postal)",method:"Forma de entrega",methodNeed:"Digite um ZIP válido para ver as opções de entrega.",
+  payment:"Pagamento",card:"Cartão",cardNum:"Número do cartão",exp:"Validade (MM/AA)",cvc:"CVC",cardHint:"Cartão de teste: 4242 4242 4242 4242",
+  wallet:"Você confirmaria o pagamento no {w}. Na demo, pulamos essa etapa.",place:"Fazer pedido · {x}",processing:"Processando…",
+  req:"Obrigatório",badEmail:"Digite um e-mail válido.",badCard:"Digite os 16 números do cartão.",badExp:"Use MM/AA.",badCvc:"3 ou 4 dígitos.",badState:"Use a sigla de 2 letras do estado.",
+  summary:"Resumo do pedido",doneT:"Obrigado, {name}!",doneP:"O pedido {id} está confirmado. Vamos prensar suas bebidas fresquinhas e mandar o rastreio para {email}.",eta:"Previsão de entrega",keepShopping:"Continuar comprando",
+  subEyebrow:"Assine e economize",subTitle:"Sua geladeira da semana, resolvida.",subP:"Escolha suas bebidas, ative a entrega semanal e economize 15% em todo pedido. Pule uma semana ou cancele quando quiser.",subCta:"Montar minha caixa",
+  how1t:"Prensado de madrugada",how1p:"Prensamos em pequenos lotes toda manhã, então nada fica parado na prateleira.",how2t:"Entregue gelado",how2p:"A embalagem térmica mantém cada garrafa gelada até a sua porta.",how3t:"Frete grátis acima de US$ 50",how3p:"Entrega no mesmo dia em Miami e de 2 a 3 dias no resto dos EUA continental.",
+  fTag:"Smoothies de fruta de verdade, prensados em Miami.",fShop:"Loja",fHelp:"Ajuda",fh1:"Frete e entrega",fh2:"Assinaturas",fh3:"Contato",credit:"Loja-conceito criada pela KYNEX. Produtos e pedidos são fictícios.",
+  addShort:"Adicionar",fk:"Monte seu kit",fq:"Quiz de sabor",
+  kitEyebrow:"Monte o seu",kitTitle:"Monte um kit de 6 e economize 15%",kitSub:"Escolha seis garrafas de 250 ml. Misture sabores, repita os favoritos e a gente embala tudo gelado.",
+  kitPick:"Escolha suas garrafas",kitProg:"{n} de 6 escolhidas",kitSave:"você economiza {x}",kitMore:"Escolha mais {n}",kitMoreOne:"Escolha mais 1",kitAddBtn:"Adicionar kit · {x}",
+  kitRand:"Me surpreenda",kitClear:"Limpar",kitFull:"Seu kit está completo. Tire uma garrafa para trocar.",kitName:"Seu kit de 6",kitRemove:"Tirar {x} do kit",kitAddOne:"Colocar {x} no kit",kitAdded:"Kit adicionado ao carrinho",
+  quizEyebrow:"Quiz de 30 segundos",quizTitle:"Não sabe por onde começar?",quizSub:"Responda três perguntas rápidas e a gente indica a sua garrafa.",quizCta:"Descobrir meu sabor",
+  quizStep:"Pergunta {n} de 3",back:"Voltar",quizResult:"Sua combinação",quizWhy:"Escolhido para: {a}",quizAlso:"Vale provar também",viewProduct:"Ver detalhes",retake:"Refazer o quiz",
+  revEyebrow:"Avaliações",revTitle:"Aprovado em toda Miami",revSum:"Nota média 4,8 em mais de 2.400 avaliações",revSay:"O que estão dizendo",
+  signIn:"Entrar",myAccount:"Minha conta",acctEyebrow:"Conta Verde Market",signInT:"Que bom te ver de novo",signInSub:"Entre para ver seus pedidos e finalizar compras mais rápido.",
+  password:"Senha",forgot:"Esqueci minha senha",noAcct:"Primeira vez?",createAcct:"Criar conta",
+  signUpT:"Crie sua conta",signUpSub:"Salve seu endereço, acompanhe seus pedidos e compre de novo com um toque.",pwHint:"Use pelo menos 8 caracteres.",haveAcct:"Já tem conta?",
+  forgotT:"Redefinir senha",forgotSub:"Digite seu e-mail e enviaremos um link para criar uma nova senha.",sendLink:"Enviar link",resetSent:"Se esse e-mail tiver conta, o link já está a caminho.",backSignIn:"Voltar para entrar",
+  resetT:"Escolha uma nova senha",newPw:"Nova senha",savePw:"Salvar senha",pwUpdated:"Senha atualizada.",
+  hi:"Olá, {name}",hiNoName:"Olá!",signOut:"Sair da conta",signedOut:"Você saiu da conta.",tabOrders:"Meus pedidos",tabProfile:"Meus dados",loading:"Carregando…",
+  noOrders:"Nenhum pedido ainda",noOrdersP:"Os pedidos feitos com a conta aberta aparecem aqui.",buyAgain:"Comprar de novo",againDone:"Itens adicionados ao carrinho de novo",
+  st_confirmed:"Confirmado",st_preparing:"Em preparo",st_out_for_delivery:"Saiu para entrega",st_delivered:"Entregue",st_cancelled:"Cancelado",
+  phone:"Telefone",saveProfile:"Salvar alterações",saved:"Salvo.",welcome:"Pronto! Boas-vindas à Verde Market!",checkEmail:"Confira seu e-mail para confirmar a conta e depois entre.",
+  errLogin:"E-mail ou senha não conferem.",errExists:"Esse e-mail já tem conta. Tente entrar.",errRate:"Muitas tentativas. Espere um minuto e tente de novo.",
+  errConfirm:"Confirme seu e-mail primeiro.",errNet:"Não conseguimos falar com o serviço de contas. Tente de novo daqui a pouco.",errGeneric:"Algo deu errado. Tente de novo.",errPerm:"Sua conta ainda não tem permissão para salvar isso.",
+  coSignedIn:"Você entrou como {email}. Este pedido vai ficar salvo na sua conta.",coGuest:"Tem conta? Entre para salvar este pedido e finalizar mais rápido.",
+  saveAddr:"Salvar este endereço na minha conta",viewOrders:"Ver meus pedidos",saveFail:"O pedido foi feito, mas não conseguimos salvá-lo na sua conta.",
+  acctDemo:"Loja de demonstração: a conta é real, os pagamentos são simulados.",
+  notTestCard:"Loja de demonstração: use um cartão de teste, como 4242 4242 4242 4242.",useTest:"Usar cartão de teste",
+  privacy:"Esta é uma loja de demonstração. Usamos seus dados só para a sua conta, e você pode excluí-la quando quiser.",
+  delTitle:"Excluir conta",delP:"Apaga seu perfil e todo o seu histórico de pedidos. Não dá para desfazer.",delBtn:"Excluir minha conta",
+  delYes:"Sim, excluir minha conta",cancel:"Cancelar",deleted:"Sua conta e seus dados foram excluídos."}
+};
+
+/* ============================================================ HELPERS ============================================================ */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let lang = localStorage.getItem("vm-lang") === "pt" ? "pt" : "en";
+const t = (k, v) => { let s = T[lang][k] ?? T.en[k] ?? k; if (v) for (const a in v) s = s.split("{" + a + "}").join(v[a]); return s; };
+const money = n => lang === "en" ? "$" + n.toFixed(2) : "US$ " + n.toFixed(2).replace(".", ",");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const el = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const PLUS = '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>';
+const XSVG = '<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+
+/* background crop of one sheet item (percent based, so it scales with its box) */
+function bgCss(f, i) {
+  const [bx, by, bw, bh] = FL[f].items[i];
+  return `background-image:url(${FL[f].sheet});background-size:${(SHEET / bw * 100).toFixed(3)}% auto;background-position:${(bx / (SHEET - bw) * 100).toFixed(3)}% ${(by / (SHEET - bh) * 100).toFixed(3)}%`;
+}
+
+/* ============================================================ HERO ============================================================ */
+const hero = $("#top"), stage = $("#stage"), tabsNav = $("#tabs"), uline = $("#uline");
+const FAC = [.40, .30, .15, .55, .75];
+const SHD = [[345,650,170,24],[720,724,300,30],[1318,638,160,22],[1045,760,150,22]];
+const BOT_H = 600, BOT_TOP = 128;
+const slides = [];
+let u = 1, cur = 0, busy = false, lastAct = 0;
+
+function piece(f, i, x, y, w, rot, mir, isBottle) {
+  const [, , bw, bh] = FL[f].items[i];
+  const o = el("div", "pc" + (mir ? " mir" : "") + (isBottle ? " bottle" : ""));
+  o.style.cssText = `left:calc(${x}*var(--u));top:calc(${y}*var(--u));width:calc(${w.toFixed(2)}*var(--u));height:calc(${(w * bh / bw).toFixed(2)}*var(--u))`;
+  const n = el("i");
+  n.style.cssText = bgCss(f, i) + `;--r:${rot}deg;--d:${(3.2 + Math.random() * 1.8).toFixed(2)}s;--dl:${(-Math.random() * 4).toFixed(2)}s`;
+  o.append(n);
+  return o;
+}
+ORDER.forEach((f, idx) => {
+  const F = FL[f];
+  const s = el("section", "slide" + (idx === 0 ? " on" : ""));
+  s.style.background = F.color;
+  s.setAttribute("aria-hidden", idx ? "true" : "false");
+  const fr = el("div", "frame");
+  const L = ["word", "shdl", "bot", "fru", "cor"].map(n => { const l = el("div", "layer " + n); fr.append(l); return l; });
+  const w = el("div", "word"); L[0].append(w);
+  SHD.forEach(([cx, cy, ww, hh]) => { const d = el("i", "shd"); d.style.cssText = `left:calc(${cx - ww / 2}*var(--u));top:calc(${cy - hh / 2}*var(--u));width:calc(${ww}*var(--u));height:calc(${hh}*var(--u))`; L[1].append(d); });
+  const [, , bw, bh] = F.items[0]; const BW = BOT_H * bw / bh;
+  L[2].append(piece(f, 0, 720 - BW / 2 + F.dx, BOT_TOP, BW, 0, 0, true));
+  F.pieces.forEach(p => (p[6] === "c" ? L[4] : L[3]).append(piece(f, p[0], p[1], p[2], p[3], p[4], p[5])));
+  s.append(fr); stage.append(s);
+  slides.push({el: s, layers: L, word: w, f});
+  const b = el("button"); b.type = "button"; b.dataset.i = idx; tabsNav.insertBefore(b, uline);
+});
+const tabBtns = $$("button", tabsNav);
+const themeMeta = $('meta[name="theme-color"]');
+function setTheme(f) {
+  document.documentElement.style.setProperty("--fl", FL[f].color);
+  document.documentElement.style.setProperty("--fld", FL[f].deep);
+  themeMeta.content = FL[f].color;
+}
+setTheme(ORDER[0]);
+
+const cv = document.createElement("canvas").getContext("2d");
+function inkPer100(txt) { cv.font = "700 100px Poppins"; const m = cv.measureText(txt); return (m.actualBoundingBoxLeft + m.actualBoundingBoxRight) || m.width; }
+const mq = matchMedia("(max-width:820px),(max-aspect-ratio:1/1)");
+function sizeWord(s, mob, visW) {
+  const txt = FLNAME[lang][s.f], n = [...txt].length, w1 = inkPer100(txt) / 100;
+  let F = 445, ls = .005;
+  const thr = mob ? Math.min(1440, visW) * .92 : 1330, target = mob ? thr : 1400;
+  if (w1 * F + ls * F * (n - 1) > thr) { ls = -.035; F = Math.min(445, target / (w1 + ls * (n - 1))); }
+  s.word.textContent = txt;
+  s.word.style.fontSize = `calc(${F.toFixed(2)}*var(--u))`;
+  s.word.style.letterSpacing = ls + "em";
+  s.word.style.top = `calc(${(403.5 + .698 * F / 2 - .85 * F).toFixed(2)}*var(--u))`;
+}
+function layout() {
+  const W = hero.clientWidth, H = hero.clientHeight, mob = mq.matches;
+  u = mob ? Math.min(W / 540, (H - 200) / 620) : Math.min(W / 1440, H / 900);
+  u = Math.max(u, .15);
+  hero.style.setProperty("--u", u + "px");
+  hero.style.setProperty("--fy", (mob ? 8 : 0) + "px");
+  slides.forEach(s => sizeWord(s, mob, W / u));
+  moveLine(false);
+  /* over the hero the header row is centred on the flavour tabs, so both read as one line */
+  if (mob) bar.style.removeProperty("--bh0");
+  else { const r = tabsNav.getBoundingClientRect(), h = hero.getBoundingClientRect(); bar.style.setProperty("--bh0", Math.max(68, Math.round(2 * (r.top - h.top + r.height / 2))) + "px"); }
+  barState();
+}
+const bar = $(".bar");
+function barState() { bar.classList.toggle("solid", scrollY > hero.offsetHeight - 70); }
+addEventListener("scroll", barState, {passive: true});
+function moveLine(anim) {
+  const b = tabBtns[cur]; if (!b) return;
+  if (!anim) uline.style.transition = "none";
+  uline.style.width = b.offsetWidth + "px";
+  uline.style.transform = `translateX(${b.offsetLeft}px)`;
+  if (!anim) { void uline.offsetWidth; uline.style.transition = ""; }
+}
+function setTabs() { tabBtns.forEach((b, i) => b.setAttribute("aria-current", i === cur ? "true" : "false")); }
+
+const CT = [0,.031,.134,.206,.278,.34,.412,.485,.546,.583,.62,.69,.79,.85,.93,1];
+const CC = [0,.006,.012,.023,.047,.07,.105,.158,.246,.55,.825,.9,.94,.956,.975,1];
+function cover(t) {
+  if (t <= 0) return 0; if (t >= 1) return 1;
+  let i = 0; while (t > CT[i + 1]) i++;
+  const k = (t - CT[i]) / (CT[i + 1] - CT[i]);
+  return CC[i] + (CC[i + 1] - CC[i]) * (3 * k * k - 2 * k * k * k);
+}
+const eoq = k => 1 - (1 - k) * (1 - k);
+function go(to, dir) {
+  if (busy || to === cur) return;
+  const A = slides[cur], B = slides[to];
+  cur = to; setTabs(); moveLine(!reduced); setHeroBuy(!reduced);
+  hero.style.backgroundColor = FL[B.f].color;
+  setTheme(B.f);
+  const swap = () => {
+    A.el.classList.remove("on"); B.el.classList.add("on");
+    A.el.setAttribute("aria-hidden", "true"); B.el.setAttribute("aria-hidden", "false");
+    [A, B].forEach(s => { s.el.style.clipPath = ""; s.el.style.zIndex = ""; s.el.style.visibility = ""; s.layers.forEach(l => l.style.transform = ""); });
+    busy = false;
+  };
+  if (reduced) { swap(); return; }
+  busy = true;
+  const FW = 1440 * u, t0 = performance.now();
+  B.el.style.visibility = "visible"; B.el.style.zIndex = 1; A.el.style.zIndex = 2;
+  B.layers.forEach((l, i) => l.style.transform = `translateX(${dir * FAC[i] * FW}px)`);
+  const step = now => {
+    const tt = (now - t0) / 970, c = cover(Math.min(tt, 1));
+    A.el.style.clipPath = dir > 0 ? `inset(0 ${c * 100}% 0 0)` : `inset(0 0 0 ${c * 100}%)`;
+    A.layers.forEach(l => l.style.transform = `translateX(${-dir * c * .14 * FW}px)`);
+    const k = eoq(clamp((tt - .5) / .42));
+    B.layers.forEach((l, i) => l.style.transform = `translateX(${dir * (1 - k) * FAC[i] * FW}px)`);
+    if (tt < 1 || k < 1) requestAnimationFrame(step); else swap();
+  };
+  requestAnimationFrame(step);
+}
+/* buy straight from the hero: the main smoothie of the flavour on screen */
+const HERO_PROD = {acai: "acai-berry", green: "green-detox", mango: "mango-sunrise", passion: "passion-fruit"};
+let hbT = 0;
+function setHeroBuy(fade) {
+  const box = $("#hbuy");
+  const fill = () => {
+    const p = byId[HERO_PROD[ORDER[cur]]];
+    $("#hbName").textContent = p.n[lang];
+    $("#hbPrice").textContent = money(p.from);
+    $("#hbAdd").setAttribute("aria-label", t("add", {x: p.n[lang]}));
+    box.classList.remove("fade");
+  };
+  clearTimeout(hbT);
+  if (fade) { box.classList.add("fade"); hbT = setTimeout(fill, 260); } else fill();
+}
+$("#hbAdd").addEventListener("click", () => { touch(); const p = byId[HERO_PROD[ORDER[cur]]]; addToCart(p.id, p.sizes[0][0], false, 1); });
+const next = () => go((cur + 1) % slides.length, 1);
+const prev = () => go((cur - 1 + slides.length) % slides.length, -1);
+const touch = () => { lastAct = Date.now(); };
+$("#next").addEventListener("click", () => { touch(); next(); });
+$("#prev").addEventListener("click", () => { touch(); prev(); });
+tabsNav.addEventListener("click", e => { const b = e.target.closest("button[data-i]"); if (!b) return; touch(); const i = +b.dataset.i; if (i !== cur) go(i, i > cur ? 1 : -1); });
+let heroVisible = true;
+new IntersectionObserver(es => es.forEach(e => heroVisible = e.isIntersecting), {threshold: .5}).observe(hero);
+const anyOverlay = () => document.body.classList.contains("lock");
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") { closeAll(); return; }
+  if (!heroVisible || anyOverlay() || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
+  if (e.key === "ArrowRight") { touch(); next(); } else if (e.key === "ArrowLeft") { touch(); prev(); }
+});
+let px = null, py = 0;
+stage.addEventListener("pointerdown", e => { px = e.clientX; py = e.clientY; });
+window.addEventListener("pointerup", e => {
+  if (px === null) return; const dx = e.clientX - px, dy = e.clientY - py; px = null;
+  if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) { touch(); dx < 0 ? next() : prev(); }
+});
+setInterval(() => { if (!document.hidden && heroVisible && !anyOverlay() && Date.now() - lastAct > 6000 && !busy) next(); }, 2600);
+let rz = 0;
+addEventListener("resize", () => { cancelAnimationFrame(rz); rz = requestAnimationFrame(layout); });
+
+let started = false;
+function start() {
+  if (started) return; started = true;
+  layout();
+  hero.classList.remove("pre");
+  if (reduced) return;
+  const E = "cubic-bezier(0.22, 0.8, 0.3, 1)", FW = 1440 * u;
+  slides[0].layers.forEach((l, i) => l.animate([{transform: `translateX(${FAC[i] * FW}px)`}, {transform: "translateX(0)"}], {duration: 900, easing: E}));
+  bar.animate([{opacity: 0, translate: "0 -14px"}, {opacity: 1, translate: "0 0"}], {duration: 1000, delay: 200, easing: E, fill: "backwards"});
+  $$(".hu", hero).forEach((e, i) => e.animate([{opacity: 0, translate: "0 14px"}, {opacity: 1, translate: "0 0"}], {duration: 1000, delay: 250 + i * 80, easing: E, fill: "backwards"}));
+}
+layout();
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(start);
+setTimeout(start, 3000);
+
+/* ============================================================ STORE ============================================================ */
+const st = {cat: "all", fl: new Set(), diet: new Set(), max: 36, rate: 0, q: "", sort: "featured"};
+const fMax = $("#fMax");
+
+function art(p, opts = {}) {
+  if (opts.poster && p.poster) return `<div class="art"><img src="${FL[p.fl].poster}" alt="${esc(p.n[lang])}"></div>`;
+  const crop = (f, i, x, y, w, rot = 0, mir = 0, z = 1) => {
+    const [, , bw, bh] = FL[f].items[i];
+    return `<i class="cp" style="${bgCss(f, i)};left:${x.toFixed(2)}%;top:${y.toFixed(2)}%;width:${w.toFixed(2)}%;height:${(w * bh / bw).toFixed(2)}%;z-index:${z};transform:${mir ? "scaleX(-1) " : ""}rotate(${rot}deg)"></i>`;
+  };
+  const bottle = (f, h, cx, top, z = 2) => { const [, , bw, bh] = FL[f].items[0]; const w = h * bw / bh; return crop(f, 0, cx - w / 2 + FL[f].dx / 14, top, w, 0, 0, z); };
+  const shadow = (cx, cy, w) => `<i class="ash" style="left:${cx - w / 2}%;top:${cy - 2.5}%;width:${w}%;height:5%"></i>`;
+  let html = "", bg;
+  const v = p.ord % 3;
+  if (p.cat === "pack") {
+    const list = p.fl, n = list.length;
+    bg = n > 1 && new Set(list).size > 1 ? `linear-gradient(135deg,${list.map(f => FL[f].color).join(",")})` : FL[list[0]].color;
+    if (p.art === "shots") {
+      list.forEach((f, k) => { html += bottle(f, 44, 50 + (k - (n - 1) / 2) * 20, 38 + (k % 2) * 4, 2 + k); });
+      html += shadow(50, 86, 80);
+    } else {
+      const sp = n > 3 ? 17 : 21;
+      list.forEach((f, k) => { const off = Math.abs(k - (n - 1) / 2); const h = 70 - off * 7; html += bottle(f, h, 50 + (k - (n - 1) / 2) * sp, 92 - h - 4 + off * 2, 10 - Math.round(off * 2)); });
+      html += shadow(50, 90, 76);
+    }
+  } else {
+    const f = p.fl; bg = FL[f].color;
+    const pairs = [[1, 2], [2, 3], [3, 1]][v];
+    if (p.cat === "shot") {
+      html += bottle(f, 52, 50, 34) + shadow(50, 87, 34);
+      html += crop(f, pairs[0], 5, 56, 30, -10) + crop(f, pairs[1], 70, 14, 22, 14) + crop(f, 6 - pairs[0] - pairs[1], 71, 62, 20, 8);
+    } else {
+      html += bottle(f, 80, 50, 9) + shadow(50, 89, 40);
+      html += crop(f, pairs[0], v === 1 ? 64 : 3, 58, 33, v ? -8 : 10, v === 2, 3);
+      html += crop(f, pairs[1], v === 1 ? 6 : 70, 9, 24, 14, 0, 1);
+    }
+  }
+  return `<div class="art" style="background:${bg}" role="img" aria-label="${esc(p.n[lang])}">${html}</div>`;
+}
+
+function filtered(ignoreCat) {
+  const q = st.q.trim().toLowerCase();
+  let list = P.filter(p =>
+    (ignoreCat || st.cat === "all" || p.cat === st.cat) &&
+    (!st.fl.size || p.fls.some(f => st.fl.has(f))) &&
+    [...st.diet].every(d => p.tags.includes(d)) &&
+    p.from <= st.max && p.r >= st.rate &&
+    (!q || [p.n.en, p.n.pt, p.d[lang], p.i.en, p.i.pt, t("t_" + p.cat), ...p.fls.map(f => FLNAME.en[f] + " " + FLNAME.pt[f])].join(" ").toLowerCase().includes(q)));
+  const S = {featured: (a, b) => a.ord - b.ord, rating: (a, b) => b.r - a.r || b.rv - a.rv, low: (a, b) => a.from - b.from, high: (a, b) => b.from - a.from, new: (a, b) => (b.b === "new") - (a.b === "new") || a.ord - b.ord};
+  return list.sort(S[st.sort]);
+}
+function renderCats() {
+  const base = filtered(true);
+  $("#cats").innerHTML = CATS.map(c => `<button type="button" data-c="${c}" class="${st.cat === c ? "on" : ""}" aria-pressed="${st.cat === c}">${t("c_" + c)} <small>${c === "all" ? base.length : base.filter(p => p.cat === c).length}</small></button>`).join("");
+  $("#fcats").innerHTML = CATS.slice(1).map(c => `<li><a href="#shop" data-c="${c}">${t("c_" + c)}</a></li>`).join("");
+}
+function renderFilters() {
+  $("#fFl").innerHTML = ORDER.map(f => `<label class="opt"><input type="checkbox" value="${f}" ${st.fl.has(f) ? "checked" : ""}><span class="dot" style="background:${FL[f].color}"></span>${FLNAME[lang][f]}<small>${P.filter(p => p.fls.includes(f)).length}</small></label>`).join("");
+  $("#fDiet").innerHTML = DIETS.map(d => `<label class="opt"><input type="checkbox" value="${d}" ${st.diet.has(d) ? "checked" : ""}>${t("d_" + d)}<small>${P.filter(p => p.tags.includes(d)).length}</small></label>`).join("");
+  $("#fRate").innerHTML = [[0, t("any")], [4.5, t("starsUp", {x: "4.5 ★"})], [4.7, t("starsUp", {x: "4.7 ★"})]].map(([v, l]) => `<label class="opt"><input type="radio" name="rate" value="${v}" ${st.rate === v ? "checked" : ""}>${l}</label>`).join("");
+  fMax.value = st.max; $("#fMaxOut").textContent = t("upTo", {x: money(st.max)});
+  $("#sort").innerHTML = ["featured", "rating", "low", "high", "new"].map(s => `<option value="${s}" ${st.sort === s ? "selected" : ""}>${t("s_" + s)}</option>`).join("");
+}
+function activeCount() { return st.fl.size + st.diet.size + (st.max < 36) + (st.rate > 0); }
+function renderGrid() {
+  const list = filtered();
+  $("#grid").innerHTML = list.map(p => `
+    <article class="card" style="--c:${FL[p.fls[0]].color}">
+      <button type="button" class="cimg" data-open="${p.id}" aria-label="${esc(p.n[lang])}">${p.b ? `<span class="badge ${p.b}">${t(p.b)}</span>` : ""}${art(p)}</button>
+      <div class="cbody">
+        <span class="ctype">${t("t_" + p.cat)}</span>
+        <h3><button type="button" data-open="${p.id}">${esc(p.n[lang])}</button></h3>
+        <p class="cdesc">${esc(p.d[lang])}</p>
+        <span class="stars"><b aria-hidden="true">★</b>${p.r.toFixed(1)} <span>(${p.rv})</span></span>
+        <div class="cfoot"><span class="price">${p.sizes.length > 1 ? `<small>${t("from")}</small>` : ""}${money(p.from)}</span><button type="button" class="qadd" data-qadd="${p.id}" aria-label="${esc(t("add", {x: p.n[lang]}))}">${PLUS}</button></div>
+      </div>
+    </article>`).join("");
+  $("#empty").hidden = list.length > 0;
+  const c = list.length === 1 ? t("countOne") : t("count", {n: list.length});
+  $("#count").textContent = c;
+  $("#fapply").textContent = list.length === 1 ? t("showOne") : t("showN", {n: list.length});
+  const ac = activeCount();
+  $("#fbtnL").textContent = t("filters") + (ac ? ` (${ac})` : "");
+  const chips = [];
+  st.fl.forEach(f => chips.push([`fl:${f}`, FLNAME[lang][f]]));
+  st.diet.forEach(d => chips.push([`diet:${d}`, t("d_" + d)]));
+  if (st.max < 36) chips.push(["max", t("upTo", {x: money(st.max)})]);
+  if (st.rate) chips.push(["rate", t("starsUp", {x: st.rate + " ★"})]);
+  if (st.q) chips.push(["q", `“${st.q}”`]);
+  $("#chips").innerHTML = chips.map(([k, l]) => `<button type="button" data-chip="${k}">${esc(l)}</button>`).join("");
+  renderCats();
+}
+function clearFilters() { st.fl.clear(); st.diet.clear(); st.max = 36; st.rate = 0; st.q = ""; $("#q").value = ""; renderFilters(); renderGrid(); }
+
+$("#cats").addEventListener("click", e => { const b = e.target.closest("[data-c]"); if (!b) return; st.cat = b.dataset.c; renderGrid(); });
+$("#fcats").addEventListener("click", e => { const a = e.target.closest("[data-c]"); if (a) { st.cat = a.dataset.c; renderGrid(); } });
+$("#fFl").addEventListener("change", e => { const v = e.target.value; e.target.checked ? st.fl.add(v) : st.fl.delete(v); renderGrid(); });
+$("#fDiet").addEventListener("change", e => { const v = e.target.value; e.target.checked ? st.diet.add(v) : st.diet.delete(v); renderGrid(); });
+$("#fRate").addEventListener("change", e => { st.rate = +e.target.value; renderGrid(); });
+fMax.addEventListener("input", () => { st.max = +fMax.value; $("#fMaxOut").textContent = t("upTo", {x: money(st.max)}); renderGrid(); });
+$("#sort").addEventListener("change", e => { st.sort = e.target.value; renderGrid(); });
+let qT = 0;
+$("#q").addEventListener("input", e => { clearTimeout(qT); qT = setTimeout(() => { st.q = e.target.value; renderGrid(); }, 120); });
+$("#q").addEventListener("keydown", e => { if (e.key === "Enter") { st.q = e.target.value; renderGrid(); document.getElementById("shop").scrollIntoView({behavior: reduced ? "auto" : "smooth"}); } });
+$("#chips").addEventListener("click", e => {
+  const b = e.target.closest("[data-chip]"); if (!b) return; const [k, v] = b.dataset.chip.split(":");
+  if (k === "fl") st.fl.delete(v); else if (k === "diet") st.diet.delete(v); else if (k === "max") st.max = 36; else if (k === "rate") st.rate = 0; else if (k === "q") { st.q = ""; $("#q").value = ""; }
+  renderFilters(); renderGrid();
+});
+$("#fclear").addEventListener("click", clearFilters);
+$("#emptyClear").addEventListener("click", clearFilters);
+$("#fbtn").addEventListener("click", () => openLayer($("#filters")));
+$("#fclose").addEventListener("click", closeAll);
+$("#fapply").addEventListener("click", closeAll);
+$("#grid").addEventListener("click", e => {
+  const q = e.target.closest("[data-qadd]"); if (q) { const p = byId[q.dataset.qadd]; addToCart(p.id, p.sizes[0][0], false, 1); return; }
+  const o = e.target.closest("[data-open]"); if (o) openProduct(o.dataset.open);
+});
+
+/* ---------------- overlays ---------------- */
+const scrim = $("#scrim");
+let lastFocus = null;
+function openLayer(node) {
+  closeAll(true);
+  lastFocus = document.activeElement;
+  node.classList.add("on"); scrim.classList.add("on"); document.body.classList.add("lock");
+  setTimeout(() => { const f = node.querySelector("button,input,select,a[href]"); if (f) f.focus({preventScroll: true}); }, 60);
+}
+function closeAll(keepFocus) {
+  $$(".modal.on,.drawer.on,.filters.on").forEach(n => n.classList.remove("on"));
+  scrim.classList.remove("on"); document.body.classList.remove("lock");
+  if (!keepFocus && lastFocus && lastFocus.focus) lastFocus.focus({preventScroll: true});
+}
+scrim.addEventListener("click", () => closeAll());
+document.addEventListener("click", e => {
+  if (e.target.closest("[data-close]")) closeAll();
+  if (e.target.closest("[data-open-cart]")) { renderCart(); openLayer($("#cart")); }
+});
+document.addEventListener("keydown", e => {
+  if (e.key !== "Tab") return;
+  const box = $(".modal.on,.drawer.on,.filters.on"); if (!box) return;
+  const f = $$("button:not([disabled]),input:not([disabled]),select,a[href]", box).filter(x => x.offsetParent !== null);
+  if (!f.length) return;
+  if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+  else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+});
+
+/* ---------------- product page (modal) ---------------- */
+const pm = $("#pm");
+let pmState = null;
+function openProduct(id) {
+  const p = byId[id];
+  pmState = {id, size: p.sizes[0][0], sub: false, qty: 1};
+  renderProduct();
+  if (!pm.classList.contains("on")) openLayer(pm); else pm.scrollTop = 0;
+}
+function unitPrice(p, size, sub) { const s = p.sizes.find(x => x[0] === size) || p.sizes[0]; return +(s[2] * (sub ? .85 : 1)).toFixed(2); }
+function renderProduct() {
+  if (!pmState) return;
+  const p = byId[pmState.id], s = pmState;
+  const up = unitPrice(p, s.size, s.sub), full = unitPrice(p, s.size, false);
+  const rel = P.filter(x => x.id !== p.id && x.fls.some(f => p.fls.includes(f))).slice(0, 4);
+  pm.innerHTML = `
+    <button type="button" class="x" data-close aria-label="${t("close")}">${XSVG}</button>
+    <div class="pm">
+      <div class="pimg">${art(p, {poster: true})}</div>
+      <div class="pinfo">
+        <span class="ctype">${t("t_" + p.cat)}${p.b ? " · " + t(p.b) : ""}</span>
+        <h2 id="pmTitle">${esc(p.n[lang])}</h2>
+        <span class="stars"><b aria-hidden="true">★★★★★</b> ${p.r.toFixed(1)} · ${t("reviews", {n: p.rv})}</span>
+        <p class="pdesc">${esc(p.d[lang])}</p>
+        <div class="pprice">${money(up * s.qty)}${s.sub ? `<s>${money(full * s.qty)}</s>` : ""}</div>
+        <div class="grp"><h4>${t("size")}</h4><div class="pills">${p.sizes.map(z => `<label><input type="radio" name="psize" value="${z[0]}" ${z[0] === s.size ? "checked" : ""}><span>${z[1]}<small>${money(z[2])}</small></span></label>`).join("")}</div></div>
+        <div class="grp"><h4>${t("purchase")}</h4><div class="pills">
+          <label><input type="radio" name="psub" value="0" ${!s.sub ? "checked" : ""}><span>${t("once")}<small>${money(full)}</small></span></label>
+          <label><input type="radio" name="psub" value="1" ${s.sub ? "checked" : ""}><span>${t("sub")}<small>${t("save15")} · ${money(unitPrice(p, s.size, true))}</small></span></label>
+        </div>${s.sub ? `<p class="msg">${t("subNote")}</p>` : ""}</div>
+        <div class="buyrow">
+          <div class="qty"><button type="button" data-pq="-1" aria-label="${t("less")}">−</button><span aria-label="${t("qty")}">${s.qty}</span><button type="button" data-pq="1" aria-label="${t("more")}">+</button></div>
+          <button type="button" class="btn" id="pmAdd">${t("addToCart")} · ${money(up * s.qty)}</button>
+        </div>
+        <div class="tags">${p.tags.map(d => `<span>${t("d_" + d)}</span>`).join("")}</div>
+        <div class="pmeta"><div><b>${t("ingredients")}:</b> ${esc(p.i[lang])}</div><div>${t("kcal", {n: p.kcal})}</div><div>${t("keep")}</div></div>
+        ${prodReviews(p)}
+      </div>
+      ${rel.length ? `<div class="rel"><h4>${t("related")}</h4><div class="relg">${rel.map(r => `<button type="button" data-rel="${r.id}">${art(r)}<span>${esc(r.n[lang])}<br><b>${money(r.from)}</b></span></button>`).join("")}</div></div>` : ""}
+    </div>`;
+}
+pm.addEventListener("change", e => {
+  if (e.target.name === "psize") pmState.size = e.target.value;
+  if (e.target.name === "psub") pmState.sub = e.target.value === "1";
+  const n = e.target.name; renderProduct(); const f = pm.querySelector(`input[name="${n}"]:checked`); if (f) f.focus({preventScroll: true});
+});
+pm.addEventListener("click", e => {
+  const q = e.target.closest("[data-pq]");
+  if (q) { pmState.qty = clamp(pmState.qty + +q.dataset.pq, 1, 24); renderProduct(); pm.querySelector(`[data-pq="${q.dataset.pq}"]`).focus(); return; }
+  if (e.target.closest("#pmAdd")) { addToCart(pmState.id, pmState.size, pmState.sub, pmState.qty); closeAll(); return; }
+  const r = e.target.closest("[data-rel]"); if (r) openProduct(r.dataset.rel);
+});
+
+/* ---------------- cart ---------------- */
+let cart = {lines: [], zip: "", ship: "", coupon: ""};
+try { const c = JSON.parse(localStorage.getItem("vm-cart")); if (c && Array.isArray(c.lines)) cart = Object.assign(cart, c); cart.lines = cart.lines.filter(l => l.items ? l.items.length === 6 && l.items.every(i => byId[i]) : byId[l.id]); } catch (e) {}
+/* a custom 6-pack is stored as one cart line with its six product ids */
+const KIT_IDS = ["acai-berry","green-detox","mango-sunrise","passion-fruit","acai-protein","mango-lassi","green-glow","golden-carrot"];
+const kitFull = ids => +ids.reduce((a, id) => a + byId[id].sizes[0][2], 0).toFixed(2);
+const kitPrice = ids => +(kitFull(ids) * .85).toFixed(2);
+function kitProd(items) {
+  return {id: "kit", cat: "pack", ord: 0, fls: [], fl: [...new Set(items.map(i => byId[i].fl))].slice(0, 4),
+          n: {en: T.en.kitName, pt: T.pt.kitName}, sizes: [["pack", "6 × 250 ml", kitPrice(items)]]};
+}
+const lineProd = l => l.items ? kitProd(l.items) : byId[l.id];
+function kitList(items) {
+  const c = {}; items.forEach(i => c[i] = (c[i] || 0) + 1);
+  return Object.keys(c).map(i => `${byId[i].n[lang]} ×${c[i]}`).join(", ");
+}
+const save = () => localStorage.setItem("vm-cart", JSON.stringify(cart));
+const lineKey = (id, size, sub) => `${id}|${size}|${sub ? 1 : 0}`;
+function addToCart(id, size, sub, qty) {
+  const k = lineKey(id, size, sub), l = cart.lines.find(x => x.k === k);
+  if (l) l.qty = Math.min(99, l.qty + qty); else cart.lines.push({k, id, size, sub, qty});
+  save(); updateCount();
+  $$(".bcart").forEach(b => { b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); });
+  toast(`${t("added")}: ${byId[id].n[lang]}`, true);
+}
+function updateCount() { const n = cart.lines.reduce((a, l) => a + l.qty, 0); $$(".ccount").forEach(c => c.textContent = n); }
+function subtotal() { return cart.lines.reduce((a, l) => a + unitPrice(lineProd(l), l.size, l.sub) * l.qty, 0); }
+function shipOpts(zip, sub) {
+  if (!/^\d{5}$/.test(zip)) return null;
+  const z3 = +zip.slice(0, 3);
+  if (z3 >= 995 || (z3 >= 967 && z3 <= 968) || z3 < 10) return [];
+  const o = [];
+  if (z3 >= 330 && z3 <= 334) o.push({id: "local", p: sub >= 35 ? 0 : 4.99});
+  const d = +zip[0], base = d === 3 ? 7.99 : d <= 6 ? 9.99 : 12.99;
+  o.push({id: "std", p: sub >= 50 ? 0 : base});
+  o.push({id: "exp", p: +(base + 10).toFixed(2)});
+  return o;
+}
+function totals() {
+  const sub = subtotal(), disc = cart.coupon === "FRESH10" ? +(sub * .1).toFixed(2) : 0;
+  const opts = shipOpts(cart.zip, sub);
+  let ship = null;
+  if (opts && opts.length) { const o = opts.find(x => x.id === cart.ship) || opts[0]; cart.ship = o.id; ship = o.p; }
+  return {sub, disc, opts, ship, total: sub - disc + (ship || 0)};
+}
+function shipList(opts, name) {
+  return `<div class="ship">${opts.map(o => `<label><input type="radio" name="${name}" value="${o.id}" ${cart.ship === o.id ? "checked" : ""}><span>${t("m_" + o.id)}<small>${t("e_" + o.id)}</small></span><b>${o.p ? money(o.p) : t("free")}</b></label>`).join("")}</div>`;
+}
+function sumHtml(T2) {
+  return `<div class="sum">
+    <div><span>${t("subtotal")}</span><span>${money(T2.sub)}</span></div>
+    ${T2.disc ? `<div><span>${t("discount")} (FRESH10)</span><span>−${money(T2.disc)}</span></div>` : ""}
+    <div><span>${t("shipping")}</span><span class="${T2.ship === null ? "muted" : ""}">${T2.ship === null ? t("shipTbd") : T2.ship ? money(T2.ship) : t("free")}</span></div>
+    <div class="tot"><span>${t("total")}</span><span>${money(T2.total)}</span></div></div>`;
+}
+function lineHtml(l, compact) {
+  const p = lineProd(l), s = p.sizes.find(x => x[0] === l.size) || p.sizes[0];
+  return `<div class="line">${art(p)}<div><h3>${esc(p.n[lang])}</h3><p>${s[1]}${l.sub ? " · " + t("weekly") : ""}${compact ? " · ×" + l.qty : ""}</p>${l.items ? `<p>${esc(kitList(l.items))}</p>` : ""}
+    ${compact ? "" : `<div class="qty"><button type="button" data-lq="${l.k}" data-d="-1" aria-label="${t("less")}">−</button><span>${l.qty}</span><button type="button" data-lq="${l.k}" data-d="1" aria-label="${t("more")}">+</button></div>`}</div>
+    <div><div class="lp">${money(unitPrice(p, l.size, l.sub) * l.qty)}</div>${compact ? "" : `<button type="button" class="rm" data-rm="${l.k}">${t("remove")}</button>`}</div></div>`;
+}
+let zipMsg = "", couponMsg = "";
+function renderCart() {
+  const body = $("#cartBody"), foot = $("#cartFoot");
+  if (!cart.lines.length) {
+    body.innerHTML = `<div class="dempty"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg><h3>${t("emptyCart")}</h3><p>${t("emptyCartP")}</p><a class="btn" href="#shop" data-close>${t("startShopping")}</a></div>`;
+    foot.innerHTML = ""; foot.hidden = true; return;
+  }
+  foot.hidden = false;
+  const T2 = totals(), left = 50 - T2.sub;
+  body.innerHTML = `
+    <div class="freebar">${left > 0 ? t("freeAway", {x: money(left)}) : "✓ " + t("freeGot")}<i><b style="width:${clamp(T2.sub / 50) * 100}%"></b></i></div>
+    ${cart.lines.map(l => lineHtml(l)).join("")}
+    <div class="box"><h4>${t("shipTitle")}</h4>
+      <form class="irow" id="zipForm"><input id="zipIn" inputmode="numeric" maxlength="5" autocomplete="postal-code" placeholder="${t("zipPh")}" aria-label="${t("zipPh")}" value="${esc(cart.zip)}"><button type="submit">${t("calc")}</button></form>
+      ${zipMsg ? `<p class="msg err">${zipMsg}</p>` : ""}
+      ${T2.opts && T2.opts.length ? shipList(T2.opts, "cship") : ""}
+    </div>
+    <div class="box"><h4>${t("coupon")}</h4>
+      <form class="irow" id="cpForm"><input id="cpIn" autocomplete="off" placeholder="FRESH10" aria-label="${t("coupon")}" value="${esc(cart.coupon)}"><button type="submit">${t("apply")}</button></form>
+      <p class="msg ${cart.coupon ? "ok" : couponMsg ? "err" : ""}">${cart.coupon ? t("couponOk") : couponMsg || t("couponHint")}</p>
+    </div>`;
+  foot.innerHTML = sumHtml(T2) + `<button type="button" class="btn" id="goCheckout">${t("checkout")} · ${money(T2.total)}</button>`;
+  save();
+}
+$("#cart").addEventListener("click", e => {
+  const q = e.target.closest("[data-lq]");
+  if (q) { const l = cart.lines.find(x => x.k === q.dataset.lq); l.qty += +q.dataset.d; if (l.qty < 1) cart.lines = cart.lines.filter(x => x !== l); save(); updateCount(); renderCart(); const b = $(`[data-lq="${q.dataset.lq}"][data-d="${q.dataset.d}"]`); if (b) b.focus(); return; }
+  const r = e.target.closest("[data-rm]");
+  if (r) { cart.lines = cart.lines.filter(x => x.k !== r.dataset.rm); save(); updateCount(); renderCart(); return; }
+  if (e.target.closest("#goCheckout")) openCheckout();
+});
+$("#cart").addEventListener("submit", e => {
+  e.preventDefault();
+  if (e.target.id === "zipForm") {
+    const z = $("#zipIn").value.trim(); cart.zip = z; cart.ship = "";
+    const o = shipOpts(z, subtotal()); zipMsg = o === null ? t("zipErr") : !o.length ? t("zipNo") : "";
+    renderCart(); $("#zipIn").focus();
+  }
+  if (e.target.id === "cpForm") {
+    const c = $("#cpIn").value.trim().toUpperCase();
+    if (!c) { cart.coupon = ""; couponMsg = ""; } else if (c === "FRESH10") { cart.coupon = c; couponMsg = ""; } else { cart.coupon = ""; couponMsg = t("couponBad"); }
+    renderCart(); $("#cpIn").focus();
+  }
+});
+$("#cart").addEventListener("change", e => { if (e.target.name === "cship") { cart.ship = e.target.value; renderCart(); const f = $(`input[name="cship"][value="${cart.ship}"]`); if (f) f.focus(); } });
+
+/* ---------------- checkout ---------------- */
+const co = $("#co");
+let coData = {email: "", name: "", addr: "", city: "", state: "", zip: "", pay: "card", num: "", exp: "", cvc: ""}, coErr = {}, coDone = null;
+function fld(k, label, cls = "", attrs = "") {
+  return `<label class="fld ${cls} ${coErr[k] ? "bad" : ""}"><span>${label}</span><input name="${k}" value="${esc(coData[k])}" ${attrs}>${coErr[k] ? `<em>${coErr[k]}</em>` : ""}</label>`;
+}
+function openCheckout() {
+  coDone = null; coErr = {};
+  if (!coData.zip) coData.zip = cart.zip;
+  prefillFromAccount();
+  renderCheckout(); openLayer(co);
+}
+function renderCheckout() {
+  if (coDone) {
+    co.innerHTML = `<button type="button" class="x" data-close aria-label="${t("close")}">${XSVG}</button>
+      <div class="done"><div class="ok"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+      <h2 id="coTitle">${t("doneT", {name: esc(coDone.name)})}</h2><p>${t("doneP", {id: "<b>" + coDone.id + "</b>", email: esc(coDone.email)})}</p>
+      <div class="eta"><b>${t("eta")}:</b> ${t("m_" + coDone.ship)} · ${t("e_" + coDone.ship)}<br>${t("total")}: <b>${money(coDone.total)}</b></div>
+      ${coDone.logged && !coDone.saved ? `<p class="msg err">${t("saveFail")}</p>` : ""}
+      <div class="qbtns" style="justify-content:center">${coDone.saved ? `<button type="button" class="btn" data-acct-open>${t("viewOrders")}</button><button type="button" class="lnk" data-close>${t("keepShopping")}</button>` : `<button type="button" class="btn" data-close>${t("keepShopping")}</button>`}</div></div>`;
+    return;
+  }
+  cart.zip = coData.zip;
+  const T2 = totals();
+  const wallets = {apple: "Apple Pay", paypal: "PayPal"};
+  co.innerHTML = `<button type="button" class="x" data-close aria-label="${t("close")}">${XSVG}</button>
+  <div class="cogrid">
+    <form class="coform" id="coForm" novalidate>
+      <h2 id="coTitle">${t("coTitle")} <span class="demob">DEMO</span></h2>
+      <p class="demo">${t("demoNote")}</p>
+      ${sb ? (acct.user ? `<p class="co-acct">${t("coSignedIn", {email: esc(acct.user.email)})}</p>` : `<p class="co-acct">${t("coGuest")} <button type="button" class="lnk" data-acct-open>${t("signIn")}</button></p>`) : ""}
+      <fieldset><legend>${t("contact")}</legend><div class="fg">${fld("email", t("email"), "", 'type="email" autocomplete="email" inputmode="email"')}</div></fieldset>
+      <fieldset><legend>${t("addrT")}</legend><div class="fg">
+        ${fld("name", t("fname"), "", 'autocomplete="name"')}
+        ${fld("addr", t("addr"), "", 'autocomplete="street-address"')}
+        ${fld("city", t("city"), "h2 city", 'autocomplete="address-level2"')}
+        ${fld("state", t("state"), "h2", 'autocomplete="address-level1" maxlength="2" placeholder="FL"')}
+        ${fld("zip", t("zip"), "h2", 'autocomplete="postal-code" inputmode="numeric" maxlength="5"')}
+      </div>${acct.user ? `<label class="chk"><input type="checkbox" name="saveAddr" ${coData.saveAddr ? "checked" : ""}>${t("saveAddr")}</label>` : ""}</fieldset>
+      <fieldset><legend>${t("method")}</legend>${T2.opts && T2.opts.length ? shipList(T2.opts, "coship") : `<p class="msg ${coErr.ship ? "err" : ""}">${T2.opts && !T2.opts.length ? t("zipNo") : t("methodNeed")}</p>`}</fieldset>
+      <fieldset><legend>${t("payment")}</legend>
+        <div class="paytabs">${[["card", t("card")], ["apple", "Apple Pay"], ["paypal", "PayPal"]].map(([v, l]) => `<label><input type="radio" name="pay" value="${v}" ${coData.pay === v ? "checked" : ""}><span>${l}</span></label>`).join("")}</div>
+        ${coData.pay === "card" ? `<div class="fg">
+          ${fld("num", t("cardNum"), "", 'inputmode="numeric" autocomplete="off" maxlength="19" placeholder="4242 4242 4242 4242"')}
+          ${fld("exp", t("exp"), "h3", 'inputmode="numeric" autocomplete="off" maxlength="5" placeholder="12/28"')}
+          ${fld("cvc", t("cvc"), "h3", 'inputmode="numeric" autocomplete="off" maxlength="4" placeholder="123"')}
+        </div><p class="msg">${t("cardHint")} <button type="button" class="lnk" data-testcard>${t("useTest")}</button></p>` : `<p class="msg">${t("wallet", {w: wallets[coData.pay]})}</p>`}
+      </fieldset>
+      <button type="submit" class="btn" id="placeBtn">${t("place", {x: money(T2.total)})}</button>
+    </form>
+    <div class="coside"><h3>${t("summary")}</h3>${cart.lines.map(l => lineHtml(l, true)).join("")}${sumHtml(T2)}</div>
+  </div>`;
+}
+co.addEventListener("input", e => {
+  const n = e.target.name; if (!n || !(n in coData) || n === "pay" || e.target.type === "checkbox") return;
+  let v = e.target.value;
+  if (n === "num") { v = v.replace(/\D/g, "").slice(0, 16).replace(/(\d{4})(?=\d)/g, "$1 "); e.target.value = v; }
+  if (n === "exp") { v = v.replace(/\D/g, "").slice(0, 4); if (v.length > 2) v = v.slice(0, 2) + "/" + v.slice(2); e.target.value = v; }
+  if (n === "state") { v = v.toUpperCase().replace(/[^A-Z]/g, ""); e.target.value = v; }
+  coData[n] = v;
+  if (n === "zip" && (v.length === 5 || v.length === 4)) { const pos = e.target.selectionStart; renderCheckout(); const z = co.querySelector('input[name="zip"]'); z.focus(); z.setSelectionRange(pos, pos); }
+});
+/* demo store: only well-known public test card numbers are accepted, so nobody can type a real card and go on */
+const TEST_CARDS = ["4242424242424242", "4000056655665556", "5555555555554444", "5200828282828210", "2223003122003222", "6011111111111117"];
+co.addEventListener("click", e => {
+  if (!e.target.closest("[data-testcard]")) return;
+  coData.num = "4242 4242 4242 4242"; coData.exp = "12/28"; coData.cvc = "123";
+  delete coErr.num; delete coErr.exp; delete coErr.cvc;
+  renderCheckout(); const b = co.querySelector("#placeBtn"); if (b) b.focus();
+});
+co.addEventListener("change", e => {
+  if (e.target.name === "saveAddr") { coData.saveAddr = e.target.checked; return; }
+  if (e.target.name === "pay") { coData.pay = e.target.value; renderCheckout(); co.querySelector(`input[name="pay"][value="${coData.pay}"]`).focus(); }
+  if (e.target.name === "coship") { cart.ship = e.target.value; renderCheckout(); co.querySelector(`input[name="coship"][value="${cart.ship}"]`).focus(); }
+});
+co.addEventListener("submit", e => {
+  e.preventDefault();
+  const d = coData, er = {};
+  ["email", "name", "addr", "city", "state", "zip"].forEach(k => { if (!d[k].trim()) er[k] = t("req"); });
+  if (d.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) er.email = t("badEmail");
+  if (d.state && !/^[A-Z]{2}$/.test(d.state)) er.state = t("badState");
+  if (d.zip && !/^\d{5}$/.test(d.zip)) er.zip = t("zipErr");
+  if (d.pay === "card") {
+    const digits = d.num.replace(/\D/g, "");
+    if (digits.length !== 16) er.num = t("badCard");
+    else if (!TEST_CARDS.includes(digits)) er.num = t("notTestCard");
+    if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(d.exp)) er.exp = t("badExp");
+    if (!/^\d{3,4}$/.test(d.cvc)) er.cvc = t("badCvc");
+  }
+  cart.zip = d.zip;
+  const T2 = totals();
+  if (!er.zip && (!T2.opts || !T2.opts.length)) er.ship = 1;
+  coErr = er;
+  if (Object.keys(er).length) { renderCheckout(); const b = co.querySelector(".fld.bad input"); if (b) b.focus(); return; }
+  const btn = $("#placeBtn"); btn.disabled = true; btn.textContent = t("processing");
+  setTimeout(async () => {
+    let code = "VM-" + Math.floor(10000 + Math.random() * 89999), saved = false;
+    if (sb && acct.user) { const c = await saveOrder(code, T2, d); if (c) { code = c; saved = true; } }
+    coDone = {name: d.name.split(" ")[0], email: d.email, id: code, ship: cart.ship, total: T2.total, saved, logged: !!(sb && acct.user)};
+    cart.lines = []; cart.coupon = ""; save(); updateCount();
+    d.num = d.exp = d.cvc = "";
+    renderCheckout(); co.scrollTop = 0; co.querySelector(".btn").focus();
+  }, 1200);
+});
+
+/* ---------------- toast ---------------- */
+let toT = 0;
+function toast(msg, withCart) {
+  const el2 = $("#toast");
+  el2.innerHTML = `<span>${esc(msg)}</span>${withCart ? `<button type="button" data-open-cart>${t("view")}</button>` : ""}`;
+  el2.classList.add("on"); clearTimeout(toT); toT = setTimeout(() => el2.classList.remove("on"), 2600);
+}
+
+/* ============================================================ BUILD A KIT ============================================================ */
+let kit = [], kitNew = -1;
+function bottleArt(f) {
+  const [, , bw, bh] = FL[f].items[0], h = 82, w = h * bw / bh;
+  return `<div class="art" style="background:${FL[f].color}"><i class="cp" style="${bgCss(f, 0)};left:${(50 - w / 2).toFixed(2)}%;top:9%;width:${w.toFixed(2)}%;height:${h}%"></i></div>`;
+}
+function renderKit() {
+  $("#crate").innerHTML = [0, 1, 2, 3, 4, 5].map(i => {
+    const id = kit[i];
+    if (!id) return `<div class="slot" aria-hidden="true">${PLUS}</div>`;
+    return `<button type="button" class="slot on ${i === kitNew ? "new" : ""}" data-slot="${i}" aria-label="${esc(t("kitRemove", {x: byId[id].n[lang]}))}">${bottleArt(byId[id].fl)}<span class="rmx" aria-hidden="true">×</span></button>`;
+  }).join("");
+  const n = kit.length;
+  $("#kitProg").textContent = t("kitProg", {n});
+  $("#kitPrice").innerHTML = n ? `<s>${money(kitFull(kit))}</s><b>${money(kitPrice(kit))}</b> · <span style="white-space:nowrap">${t("kitSave", {x: money(kitFull(kit) - kitPrice(kit))})}</span>` : "";
+  $("#kitBar").style.width = (n / 6 * 100) + "%";
+  const btn = $("#kitAdd");
+  btn.disabled = n < 6;
+  btn.textContent = n < 6 ? (6 - n === 1 ? t("kitMoreOne") : t("kitMore", {n: 6 - n})) : t("kitAddBtn", {x: money(kitPrice(kit))});
+  $("#kitPick").innerHTML = KIT_IDS.map(id => {
+    const p = byId[id], c = kit.filter(x => x === id).length;
+    return `<button type="button" class="kp" data-kp="${id}" aria-label="${esc(t("kitAddOne", {x: p.n[lang]}))}${c ? " (" + c + ")" : ""}">${art(p)}<span><b>${esc(p.n[lang])}</b><small>250 ml · ${money(p.sizes[0][2])}</small></span><i class="${c ? "" : "z"}" aria-hidden="true">${c || "+"}</i></button>`;
+  }).join("");
+}
+$("#kitPick").addEventListener("click", e => {
+  const b = e.target.closest("[data-kp]"); if (!b) return;
+  if (kit.length >= 6) { toast(t("kitFull")); return; }
+  kit.push(b.dataset.kp); kitNew = kit.length - 1; renderKit();
+  const again = $(`[data-kp="${b.dataset.kp}"]`); if (again) again.focus({preventScroll: true});
+});
+$("#crate").addEventListener("click", e => {
+  const s = e.target.closest("[data-slot]"); if (!s) return;
+  kit.splice(+s.dataset.slot, 1); kitNew = -1; renderKit();
+});
+$("#kitRand").addEventListener("click", () => {
+  while (kit.length < 6) kit.push(KIT_IDS[Math.floor(Math.random() * KIT_IDS.length)]);
+  kitNew = -1; renderKit();
+  $$(".slot.on .art", $("#crate")).forEach((a, i) => { if (!reduced) a.animate([{transform: "translateY(-14%) scale(.8)", opacity: 0}, {transform: "none", opacity: 1}], {duration: 420, delay: i * 60, easing: "cubic-bezier(.2,.9,.3,1.25)", fill: "backwards"}); });
+});
+$("#kitClear").addEventListener("click", () => { kit = []; kitNew = -1; renderKit(); });
+$("#kitAdd").addEventListener("click", () => {
+  if (kit.length < 6) return;
+  const k = "kit|" + kit.join(","), l = cart.lines.find(x => x.k === k);
+  if (l) l.qty = Math.min(99, l.qty + 1); else cart.lines.push({k, id: "kit", size: "pack", sub: false, qty: 1, items: [...kit]});
+  save(); updateCount();
+  $$(".bcart").forEach(b => { b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); });
+  toast(t("kitAdded"), true);
+  kit = []; kitNew = -1; renderKit();
+});
+
+/* ============================================================ QUIZ ============================================================ */
+const QZ = [
+  {k: "goal", q: {en: "What are you after?", pt: "O que você procura?"}, o: [
+    ["energy", {en: "More energy", pt: "Mais energia"}], ["light", {en: "Something light", pt: "Algo leve"}],
+    ["gym", {en: "Post-workout fuel", pt: "Energia pós-treino"}], ["immune", {en: "An immunity boost", pt: "Reforço na imunidade"}]]},
+  {k: "taste", q: {en: "Pick a flavor family", pt: "Escolha uma linha de sabor"}, o: [
+    ["acai", {en: "Berries", pt: "Frutas roxas"}], ["green", {en: "Green and fresh", pt: "Verde e refrescante"}],
+    ["mango", {en: "Tropical", pt: "Tropical"}], ["passion", {en: "Citrus and tangy", pt: "Cítrico e azedinho"}]]},
+  {k: "when", q: {en: "When will you drink it?", pt: "Quando você vai tomar?"}, o: [
+    ["morning", {en: "With breakfast", pt: "No café da manhã"}], ["afternoon", {en: "Afternoon pick-me-up", pt: "No lanche da tarde"}],
+    ["gym", {en: "After the gym", pt: "Depois da academia"}], ["any", {en: "Anytime", pt: "A qualquer hora"}]]}
+];
+const qz = $("#quiz");
+let qs = {step: 0, a: []};
+function quizPick([goal, taste, when]) {
+  const score = p => {
+    let s = p.fls.includes(taste) ? 3 : 0;
+    if (goal === "energy") { if (!p.tags.includes("cfree")) s += 3; if (p.cat === "smoothie") s += 1; }
+    if (goal === "light") { if (p.kcal <= 130) s += 2; if (p.cat === "juice") s += 1; }
+    if ((goal === "gym" || when === "gym") && p.tags.includes("protein")) s += 3;
+    if (goal === "immune" && p.cat === "shot") s += 3;
+    if (when === "morning" && p.cat === "smoothie") s += 1;
+    if (when === "afternoon" && p.cat === "juice") s += 1;
+    return s + p.r / 10;
+  };
+  return P.filter(p => p.cat !== "pack").sort((x, y) => score(y) - score(x)).slice(0, 3);
+}
+function renderQuiz() {
+  let h = `<button type="button" class="x" data-close aria-label="${t("close")}">${XSVG}</button><div class="qzin">`;
+  if (qs.step < 3) {
+    const Q = QZ[qs.step];
+    h += `<p class="eyebrow">${t("quizStep", {n: qs.step + 1})}</p><h2 id="qzTitle">${Q.q[lang]}</h2>
+      <div class="qopts">${Q.o.map(([v, l]) => `<button type="button" data-qa="${v}">${Q.k === "taste" ? `<span class="dot" style="background:${FL[v].color}"></span>` : ""}${l[lang]}</button>`).join("")}</div>
+      <div class="qdots" aria-hidden="true">${[0, 1, 2].map(i => `<i class="${i <= qs.step ? "on" : ""}"></i>`).join("")}</div>
+      ${qs.step ? `<button type="button" class="qback" data-qback>${t("back")}</button>` : ""}`;
+  } else {
+    const [m, ...rest] = quizPick(qs.a);
+    const labels = qs.a.map((v, i) => QZ[i].o.find(o => o[0] === v)[1][lang]);
+    h += `<p class="eyebrow">${t("quizResult")}</p>
+      <div class="qres">${art(m, {poster: true})}<div><h3 id="qzTitle">${esc(m.n[lang])}</h3><p>${esc(m.d[lang])}</p><p class="qwhy">${t("quizWhy", {a: labels.join(" · ")})}</p>
+        <div class="qbtns"><button type="button" class="btn" data-qadd="${m.id}">${t("addToCart")} · ${money(m.from)}</button><button type="button" class="lnk" data-qview="${m.id}">${t("viewProduct")}</button></div></div></div>
+      <div class="qalso"><h4>${t("quizAlso")}</h4><div class="relg">${rest.map(r => `<button type="button" data-qview="${r.id}">${art(r)}<span>${esc(r.n[lang])}<br><b>${money(r.from)}</b></span></button>`).join("")}</div></div>
+      <button type="button" class="qback" data-qretake>${t("retake")}</button>`;
+  }
+  qz.innerHTML = h + "</div>";
+}
+function focusQuiz() { const f = qz.querySelector("[data-qa],[data-qadd]"); if (f) f.focus({preventScroll: true}); qz.scrollTop = 0; }
+$("#quizOpen").addEventListener("click", () => { qs = {step: 0, a: []}; renderQuiz(); openLayer(qz); });
+qz.addEventListener("click", e => {
+  const a = e.target.closest("[data-qa]");
+  if (a) { qs.a[qs.step] = a.dataset.qa; qs.step++; renderQuiz(); focusQuiz(); return; }
+  if (e.target.closest("[data-qback]")) { qs.step--; renderQuiz(); focusQuiz(); return; }
+  if (e.target.closest("[data-qretake]")) { qs = {step: 0, a: []}; renderQuiz(); focusQuiz(); return; }
+  const ad = e.target.closest("[data-qadd]");
+  if (ad) { const p = byId[ad.dataset.qadd]; addToCart(p.id, p.sizes[0][0], false, 1); return; }
+  const v = e.target.closest("[data-qview]"); if (v) openProduct(v.dataset.qview);
+});
+$("#qart").innerHTML = art(byId["rainbow-pack"]);
+
+/* ============================================================ REVIEWS ============================================================ */
+const REV = [
+  {n: "Camila R.", c: "Miami Beach, FL", p: "acai-berry", r: 5, t: {en: "Tastes like an açaí bowl you can drink. I keep a few in the fridge for busy mornings.", pt: "Parece um açaí na tigela que dá para beber. Deixo alguns na geladeira para as manhãs corridas."}},
+  {n: "Marcus T.", c: "Brickell, FL", p: "green-power", r: 5, t: {en: "Finally a protein smoothie that doesn't taste chalky. My go-to after the gym.", pt: "Finalmente um smoothie de proteína sem gosto de giz. É o meu pós-treino."}},
+  {n: "Sofia L.", c: "Coral Gables, FL", p: "mango-sunrise", r: 5, t: {en: "Mango Sunrise is pure vacation. Delivery came the same afternoon, still ice cold.", pt: "O Mango Sunrise é férias na garrafa. A entrega chegou na mesma tarde, bem gelada."}},
+  {n: "Priya S.", c: "Wynwood, FL", p: "green-detox", r: 5, t: {en: "Green Detox is fresh, not grassy. The kiwi makes all the difference.", pt: "O Green Detox é refrescante, sem gosto de mato. O kiwi faz toda a diferença."}},
+  {n: "Ana P.", c: "Little Havana, FL", p: "passion-fruit", r: 5, t: {en: "Tastes like the maracujá juice my grandma used to make. Not too sweet.", pt: "Tem gosto do suco de maracujá da minha avó. E não é doce demais."}},
+  {n: "Jordan M.", c: "Doral, FL", p: "rainbow-pack", r: 5, t: {en: "Got the Rainbow 4-Pack to try everything. Now I'm on the weekly subscription.", pt: "Peguei o Kit Arco-íris para provar tudo. Agora estou na assinatura semanal."}},
+  {n: "Daniel K.", c: "Fort Lauderdale, FL", p: "ginger-shot", r: 4, t: {en: "The ginger shot is no joke. Wakes me up better than coffee.", pt: "O shot de gengibre é forte de verdade. Me acorda melhor que café."}},
+  {n: "Chris B.", c: "Coconut Grove, FL", p: "golden-carrot", r: 4, t: {en: "Golden Carrot with turmeric is my afternoon reset. Wish the 1 L came in glass.", pt: "O Golden Carrot com cúrcuma é o meu respiro da tarde. Queria o de 1 L em vidro."}}
+];
+const starStr = r => "★".repeat(r) + "☆".repeat(5 - r);
+function renderReviews() {
+  $("#rgrid").innerHTML = REV.slice(0, 6).map(r => {
+    const p = byId[r.p];
+    return `<article class="rv" style="--c:${FL[p.fls[0]].color}"><span class="st" aria-label="${r.r}/5">${starStr(r.r)}</span><p>“${esc(r.t[lang])}”</p>
+      <div class="rwho"><span class="av" style="background:${FL[p.fls[0]].deep}" aria-hidden="true">${r.n[0]}</span><span><b>${r.n}</b><small>${r.c}</small></span><button type="button" data-open="${p.id}">${esc(p.n[lang])}</button></div></article>`;
+  }).join("");
+}
+function prodReviews(p) {
+  const list = REV.filter(r => r.p === p.id).concat(REV.filter(r => r.p !== p.id && byId[r.p].fls.some(f => p.fls.includes(f)))).slice(0, 2);
+  if (!list.length) return "";
+  return `<div class="prevs"><h4>${t("revSay")}</h4>${list.map(r => `<div><span class="st" aria-label="${r.r}/5">${starStr(r.r)}</span><p>“${esc(r.t[lang])}”</p><small>${r.n} · ${r.c}</small></div>`).join("")}</div>`;
+}
+$("#rgrid").addEventListener("click", e => { const o = e.target.closest("[data-open]"); if (o) openProduct(o.dataset.open); });
+
+/* ============================================================ DECOR ============================================================ */
+/* perks ticker: four copies of the four perks, so each half is wider than any screen */
+(() => { const tr = $(".ptrack"), base = tr.innerHTML, dup = base.replace(/<span /g, '<span aria-hidden="true" '); tr.innerHTML = base + dup + dup + dup; })();
+/* fruit pieces floating between sections (cut from the same sheets) */
+function deco(f, i, css, rot, blur, side) {
+  const [, , bw, bh] = FL[f].items[i];
+  return `<i class="deco${blur ? " soft" : ""}${side ? " side" : ""}" aria-hidden="true" style="${bgCss(f, i)};aspect-ratio:${bw}/${bh};--r:${rot}deg;--dd:${(5 + Math.random() * 2.5).toFixed(2)}s;${css}"></i>`;
+}
+$("#shop").insertAdjacentHTML("afterbegin", deco("mango", 1, "right:-10px;top:24px;width:150px", 12) + deco("green", 1, "right:190px;top:-36px;width:92px", -18, 1) + deco("passion", 2, "left:46%;top:70px;width:70px", 20, 1));
+$("#kit").insertAdjacentHTML("afterbegin", deco("passion", 1, "left:-26px;top:-46px;width:130px", -14) + deco("acai", 2, "right:-22px;bottom:40px;width:120px", 10));
+$("#reviews").insertAdjacentHTML("afterbegin", deco("acai", 1, "right:-34px;top:-96px;width:120px", 8) + deco("green", 2, "left:38%;top:0;width:64px", -20, 1));
+$("#subscribe").insertAdjacentHTML("afterbegin", deco("mango", 3, "left:-20px;top:-40px;width:96px", 18));
+/* extra pieces in the side margins, wide screens only */
+$("#shop").insertAdjacentHTML("afterbegin",
+  deco("acai", 3, "left:-84px;top:560px;width:92px", -14, 0, 1) +
+  deco("passion", 3, "right:-88px;top:980px;width:108px", 16, 0, 1) +
+  deco("green", 3, "left:-86px;top:1460px;width:100px", 22, 1, 1));
+$("#quizcta").insertAdjacentHTML("afterbegin", deco("mango", 2, "right:-86px;top:30px;width:100px", -12, 0, 1));
+$("#subscribe").insertAdjacentHTML("afterbegin", deco("acai", 2, "left:-84px;top:260px;width:88px", 8, 1, 1));
+/* second wave: more side pieces down the product grid, plus a few that also show on phones */
+$("#shop").insertAdjacentHTML("afterbegin",
+  deco("acai", 1, "right:-90px;top:1820px;width:104px", -10, 0, 1) +
+  deco("mango", 1, "left:-90px;top:2280px;width:108px", 14, 1, 1) +
+  deco("passion", 1, "right:-86px;top:2760px;width:96px", -18, 0, 1) +
+  deco("green", 1, "left:-82px;top:3200px;width:86px", 10, 0, 1) +
+  deco("mango", 2, "right:-88px;top:3680px;width:98px", 12, 1, 1) +
+  deco("acai", 2, "left:-84px;top:4200px;width:92px", -6, 0, 1));
+$("#kit").insertAdjacentHTML("afterbegin", deco("green", 1, "left:42%;top:-58px;width:84px", -12));
+$("#quizcta").insertAdjacentHTML("afterbegin", deco("acai", 3, "left:-24px;top:-44px;width:96px", -8));
+$("#reviews").insertAdjacentHTML("afterbegin", deco("mango", 3, "left:-26px;bottom:-30px;width:86px", 12));
+$("#subscribe").insertAdjacentHTML("afterbegin", deco("green", 2, "right:-84px;top:560px;width:100px", -16, 0, 1) + deco("passion", 2, "right:24%;top:-52px;width:92px", 18));
+document.querySelector("footer").insertAdjacentHTML("afterbegin", deco("passion", 3, "right:9%;top:-58px;width:96px;z-index:1", 6));
+
+/* ============================================================ ACCOUNT (Supabase) ============================================================
+   The publishable key is meant for the browser: every table is protected by Row Level Security,
+   so each customer can only read and create their own rows. Never put a secret key here. */
+const SB_URL = "https://bwcvwpfadbaiavisxfel.supabase.co";
+const SB_KEY = "sb_publishable_ti7fz63HPoMNDyt1-mbDkQ_8xCfx8mW";
+const sb = window.supabase && window.supabase.createClient ? window.supabase.createClient(SB_URL, SB_KEY) : null;
+const acm = $("#acm");
+const acct = {user: null, profile: null, view: "signin", tab: "orders", orders: null, err: "", msg: "", busy: false, returnTo: null, f: {}};
+const USERSVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>';
+
+function displayName() { return (acct.profile && acct.profile.full_name) || (acct.user && acct.user.email) || ""; }
+function updateAcctBtn() {
+  const b = $("#bacct");
+  if (!sb) { b.hidden = true; return; }
+  b.hidden = false;
+  b.classList.toggle("in", !!acct.user);
+  b.innerHTML = acct.user ? esc((displayName().trim()[0] || "?").toUpperCase()) : USERSVG;
+  b.setAttribute("aria-label", acct.user ? t("myAccount") : t("signIn"));
+}
+function authErr(e) {
+  if (e) console.warn("[Verde Market account]", e.code || e.status || "", e.message || e);
+  const m = String((e && e.message) || "").toLowerCase();
+  if (e && e.code === "42501") return t("errPerm") + " (42501)";
+  if (e && e.code && /^[0-9A-Z]{5}$/.test(e.code)) return t("errGeneric") + ` (${e.code})`;
+  if (m.includes("invalid login")) return t("errLogin");
+  if (m.includes("already registered") || m.includes("already been registered") || m.includes("already exists")) return t("errExists");
+  if (m.includes("password") && (m.includes("least") || m.includes("short") || m.includes("weak"))) return t("pwHint");
+  if ((e && e.status === 429) || m.includes("rate limit")) return t("errRate");
+  if (m.includes("not confirmed")) return t("errConfirm");
+  if (m.includes("fetch") || m.includes("network")) return t("errNet");
+  return t("errGeneric");
+}
+async function loadProfile() {
+  if (!acct.user) { acct.profile = null; return; }
+  const {data} = await sb.from("profiles").select("*").eq("id", acct.user.id).maybeSingle();
+  acct.profile = data || null;
+}
+async function refreshOrders() {
+  acct.orders = null; renderAcct();
+  const {data, error} = await sb.from("orders").select("*").order("created_at", {ascending: false}).limit(50);
+  acct.orders = error ? [] : data;
+  if (error) acct.err = authErr(error);
+  if (acm.classList.contains("on")) renderAcct();
+}
+function prefillFromAccount() {
+  if (!sb || !acct.user) return;
+  const p = acct.profile || {};
+  if (!coData.email) coData.email = acct.user.email || "";
+  [["name", "full_name"], ["addr", "address"], ["city", "city"], ["state", "state"], ["zip", "zip"]].forEach(([k, f]) => { if (!coData[k] && p[f]) coData[k] = p[f]; });
+  coData.saveAddr = !p.address;
+}
+function orderItems() {
+  return cart.lines.map(l => {
+    const p = lineProd(l), o = {id: l.id, size: l.size, sub: !!l.sub, qty: l.qty, unit: unitPrice(p, l.size, l.sub), name: p.n.en};
+    if (l.items) o.items = l.items;
+    return o;
+  });
+}
+async function saveOrder(code, T2, d) {
+  try {
+    const row = {code, items: orderItems(), subtotal: +T2.sub.toFixed(2), discount: +T2.disc.toFixed(2), shipping: +(T2.ship || 0).toFixed(2), total: +T2.total.toFixed(2),
+      coupon: cart.coupon || null, ship_method: cart.ship || null, payment_method: d.pay,
+      ship_address: {name: d.name, address: d.addr, city: d.city, state: d.state, zip: d.zip}};
+    let {error} = await sb.from("orders").insert(row);
+    if (error && error.code === "23505") { row.code = "VM-" + Math.floor(10000 + Math.random() * 89999); ({error} = await sb.from("orders").insert(row)); }
+    if (error) return null;
+    if (d.saveAddr) {
+      const {data} = await sb.from("profiles").update({full_name: d.name, address: d.addr, city: d.city, state: d.state, zip: d.zip}).eq("id", acct.user.id).select().maybeSingle();
+      if (data) acct.profile = data;
+    }
+    acct.orders = null;
+    return row.code;
+  } catch (e) { return null; }
+}
+
+function openAcct(view, returnTo) {
+  acct.view = acct.user ? "account" : (view || "signin");
+  acct.err = ""; acct.msg = ""; acct.returnTo = returnTo || null; acct.delAsk = false;
+  renderAcct(); openLayer(acm);
+  if (acct.user && acct.tab === "orders") refreshOrders();
+}
+function afld(k, label, type, attrs, cls) {
+  return `<label class="fld ${cls || ""}"><span>${label}</span><input name="${k}" type="${type || "text"}" value="${esc(acct.f[k] || "")}" ${attrs || ""}></label>`;
+}
+function fmtDate(s) { return new Date(s).toLocaleDateString(lang === "en" ? "en-US" : "pt-BR", {day: "numeric", month: "short", year: "numeric"}); }
+function itemLabel(i) {
+  if (i.items) return `${t("kitName")} (${kitList(i.items.filter(x => byId[x]))})`;
+  const p = byId[i.id], s = p && p.sizes.find(z => z[0] === i.size);
+  return (p ? p.n[lang] : i.name) + (s ? " · " + s[1] : "") + (i.sub ? " · " + t("weekly") : "");
+}
+function renderAcct() {
+  const v = acct.view, busy = acct.busy ? "disabled" : "";
+  const msgs = (acct.err ? `<p class="msg err" role="alert">${esc(acct.err)}</p>` : "") + (acct.msg ? `<p class="msg ok" role="status">${esc(acct.msg)}</p>` : "");
+  let h = `<button type="button" class="x" data-close aria-label="${t("close")}">${XSVG}</button><div class="acin">`;
+  if (v === "signin") {
+    h += `<p class="eyebrow">${t("acctEyebrow")}</p><h2 id="acTitle">${t("signInT")}</h2><p class="asub">${t("signInSub")}</p>
+      <form id="acForm" data-act="signin" novalidate><div class="fg">${afld("email", t("email"), "email", 'autocomplete="email" inputmode="email"')}${afld("password", t("password"), "password", 'autocomplete="current-password"')}</div>
+      ${msgs}<button class="btn" type="submit" ${busy}>${acct.busy ? t("processing") : t("signIn")}</button></form>
+      <div class="alinks"><button type="button" class="lnk" data-av="forgot">${t("forgot")}</button><span>${t("noAcct")} <button type="button" class="lnk" data-av="signup">${t("createAcct")}</button></span></div>`;
+  } else if (v === "signup") {
+    h += `<p class="eyebrow">${t("acctEyebrow")}</p><h2 id="acTitle">${t("signUpT")}</h2><p class="asub">${t("signUpSub")}</p>
+      <form id="acForm" data-act="signup" novalidate><div class="fg">${afld("name", t("fname"), "text", 'autocomplete="name" maxlength="120"')}${afld("email", t("email"), "email", 'autocomplete="email" inputmode="email"')}${afld("password", t("password"), "password", 'autocomplete="new-password" minlength="8"')}</div>
+      <p class="msg">${t("pwHint")}</p><p class="apriv">${t("privacy")}</p>${msgs}<button class="btn" type="submit" ${busy}>${acct.busy ? t("processing") : t("createAcct")}</button></form>
+      <div class="alinks"><span>${t("haveAcct")} <button type="button" class="lnk" data-av="signin">${t("signIn")}</button></span></div>`;
+  } else if (v === "forgot") {
+    h += `<p class="eyebrow">${t("acctEyebrow")}</p><h2 id="acTitle">${t("forgotT")}</h2><p class="asub">${t("forgotSub")}</p>
+      <form id="acForm" data-act="forgot" novalidate><div class="fg">${afld("email", t("email"), "email", 'autocomplete="email" inputmode="email"')}</div>
+      ${msgs}<button class="btn" type="submit" ${busy}>${acct.busy ? t("processing") : t("sendLink")}</button></form>
+      <div class="alinks"><button type="button" class="lnk" data-av="signin">${t("backSignIn")}</button></div>`;
+  } else if (v === "reset") {
+    h += `<p class="eyebrow">${t("acctEyebrow")}</p><h2 id="acTitle">${t("resetT")}</h2>
+      <form id="acForm" data-act="reset" novalidate><div class="fg">${afld("password", t("newPw"), "password", 'autocomplete="new-password" minlength="8"')}</div>
+      <p class="msg">${t("pwHint")}</p>${msgs}<button class="btn" type="submit" ${busy}>${acct.busy ? t("processing") : t("savePw")}</button></form>`;
+  } else {
+    const nm = displayName();
+    h += `<div class="ahead"><span class="av" aria-hidden="true">${esc((nm.trim()[0] || "?").toUpperCase())}</span><div><h2 id="acTitle">${(acct.profile && acct.profile.full_name) ? t("hi", {name: esc(acct.profile.full_name.trim().split(" ")[0])}) : t("hiNoName")}</h2><p>${esc(acct.user.email || "")}</p></div></div>
+      <div class="atabs" role="tablist"><button type="button" role="tab" data-tab="orders" class="${acct.tab === "orders" ? "on" : ""}" aria-selected="${acct.tab === "orders"}">${t("tabOrders")}</button><button type="button" role="tab" data-tab="profile" class="${acct.tab === "profile" ? "on" : ""}" aria-selected="${acct.tab === "profile"}">${t("tabProfile")}</button></div>`;
+    if (acct.tab === "orders") {
+      const o = acct.orders;
+      if (o === null) h += `<p class="aempty">${t("loading")}</p>`;
+      else if (!o.length) h += `${msgs}<div class="aempty"><h3>${t("noOrders")}</h3><p>${t("noOrdersP")}</p><a class="btn" href="#shop" data-close>${t("startShopping")}</a></div>`;
+      else h += msgs + o.map(ord => `<div class="ord"><div class="ordh"><b>${esc(ord.code)}</b><span class="stb s-${ord.status}">${t("st_" + ord.status)}</span></div>
+        <p class="ordd">${fmtDate(ord.created_at)}${ord.ship_method ? " · " + t("m_" + ord.ship_method) : ""}</p>
+        <ul>${(ord.items || []).map(i => `<li>${i.qty} × ${esc(itemLabel(i))}</li>`).join("")}</ul>
+        <div class="ordf"><b>${money(+ord.total)}</b><button type="button" class="lnk" data-again="${ord.id}">${t("buyAgain")}</button></div></div>`).join("");
+    } else {
+      const p = acct.profile || {};
+      ["full_name", "phone", "address", "city", "state", "zip"].forEach(k => { if (acct.f[k] === undefined) acct.f[k] = p[k] || ""; });
+      h += `<form id="acForm" data-act="profile" novalidate><div class="fg">
+        ${afld("full_name", t("fname"), "text", 'autocomplete="name" maxlength="120"')}
+        ${afld("phone", t("phone"), "tel", 'autocomplete="tel" maxlength="30"')}
+        ${afld("address", t("addr"), "text", 'autocomplete="street-address" maxlength="200"')}
+        ${afld("city", t("city"), "text", 'autocomplete="address-level2" maxlength="80"', "h2 city")}
+        ${afld("state", t("state"), "text", 'autocomplete="address-level1" maxlength="2" placeholder="FL"', "h2")}
+        ${afld("zip", t("zip"), "text", 'autocomplete="postal-code" inputmode="numeric" maxlength="5"', "h2")}
+      </div>${msgs}<button class="btn" type="submit" ${busy}>${acct.busy ? t("processing") : t("saveProfile")}</button></form>
+      <div class="danger"><b>${t("delTitle")}</b>${t("delP")}
+        ${acct.delAsk ? `<div class="row"><button type="button" class="btn red" data-delyes ${busy}>${acct.busy ? t("processing") : t("delYes")}</button><button type="button" class="lnk" data-delno>${t("cancel")}</button></div>`
+                      : `<div><button type="button" class="lnk" data-delask>${t("delBtn")}</button></div>`}</div>`;
+    }
+    h += `<button type="button" class="signout" data-signout>${t("signOut")}</button>`;
+  }
+  if (v !== "account") h += `<p class="ademo">${t("acctDemo")}</p>`;
+  acm.innerHTML = h + "</div>";
+}
+function focusAcct() { const f = acm.querySelector("#acForm input, [data-tab].on"); if (f) f.focus({preventScroll: true}); acm.scrollTop = 0; }
+function addLine(id, size, sub, qty, items) {
+  const k = items ? "kit|" + items.join(",") : lineKey(id, size, sub), l = cart.lines.find(x => x.k === k);
+  if (l) l.qty = Math.min(99, l.qty + qty); else cart.lines.push(items ? {k, id: "kit", size: "pack", sub: false, qty, items: [...items]} : {k, id, size, sub, qty});
+}
+
+document.addEventListener("click", e => {
+  if (!e.target.closest("[data-acct-open]")) return;
+  if (!sb) return;
+  const fromCo = !!e.target.closest("#co") && !coDone;
+  if (coDone) acct.tab = "orders";
+  openAcct("signin", fromCo ? "checkout" : null);
+});
+acm.addEventListener("input", e => { if (e.target.name) acct.f[e.target.name] = e.target.value; });
+acm.addEventListener("click", async e => {
+  const av = e.target.closest("[data-av]");
+  if (av) { acct.view = av.dataset.av; acct.err = ""; acct.msg = ""; renderAcct(); focusAcct(); return; }
+  const tb = e.target.closest("[data-tab]");
+  if (tb) { acct.tab = tb.dataset.tab; acct.err = ""; acct.msg = ""; if (acct.tab === "orders") refreshOrders(); else renderAcct(); const f = acm.querySelector(`[data-tab="${acct.tab}"]`); if (f) f.focus(); return; }
+  if (e.target.closest("[data-delask]")) { acct.delAsk = true; acct.err = ""; acct.msg = ""; renderAcct(); const y = acm.querySelector("[data-delno]"); if (y) y.focus(); return; }
+  if (e.target.closest("[data-delno]")) { acct.delAsk = false; renderAcct(); return; }
+  if (e.target.closest("[data-delyes]")) {
+    if (acct.busy) return;
+    acct.busy = true; renderAcct();
+    const {error} = await sb.rpc("delete_my_account");
+    acct.busy = false; acct.delAsk = false;
+    if (error) { acct.err = authErr(error); renderAcct(); return; }
+    await sb.auth.signOut({scope: "local"});
+    acct.user = null; acct.profile = null; acct.orders = null; acct.f = {}; coData.email = ""; coData.name = ""; coData.addr = ""; coData.city = ""; coData.state = ""; coData.zip = "";
+    updateAcctBtn(); acct.view = "signin"; acct.err = ""; acct.msg = t("deleted"); renderAcct(); focusAcct(); return;
+  }
+  if (e.target.closest("[data-signout]")) {
+    await sb.auth.signOut();
+    acct.user = null; acct.profile = null; acct.orders = null; acct.f = {};
+    updateAcctBtn(); acct.view = "signin"; acct.err = ""; acct.msg = t("signedOut"); renderAcct(); focusAcct(); return;
+  }
+  const ag = e.target.closest("[data-again]");
+  if (ag) {
+    const ord = (acct.orders || []).find(o => o.id === ag.dataset.again); if (!ord) return;
+    (ord.items || []).forEach(i => {
+      if (i.items) { if (i.items.length === 6 && i.items.every(x => byId[x])) addLine("kit", "pack", false, i.qty, i.items); }
+      else if (byId[i.id]) addLine(i.id, byId[i.id].sizes.some(z => z[0] === i.size) ? i.size : byId[i.id].sizes[0][0], !!i.sub, i.qty);
+    });
+    save(); updateCount(); closeAll(true); renderCart(); openLayer($("#cart")); toast(t("againDone"));
+  }
+});
+acm.addEventListener("submit", async e => {
+  e.preventDefault();
+  if (acct.busy) return;
+  const act = e.target.dataset.act, f = acct.f;
+  const email = (f.email || "").trim(), pw = f.password || "";
+  acct.err = ""; acct.msg = "";
+  if ((act === "signin" || act === "signup" || act === "forgot") && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { acct.err = t("badEmail"); renderAcct(); focusAcct(); return; }
+  if ((act === "signup" || act === "reset") && pw.length < 8) { acct.err = t("pwHint"); renderAcct(); focusAcct(); return; }
+  if (act === "signin" && !pw) { acct.err = t("req"); renderAcct(); focusAcct(); return; }
+  if (act === "signup" && !(f.name || "").trim()) { acct.err = t("fname") + ": " + t("req"); renderAcct(); focusAcct(); return; }
+  if (act === "profile") {
+    f.state = (f.state || "").toUpperCase().trim(); f.zip = (f.zip || "").trim();
+    if (f.state && !/^[A-Z]{2}$/.test(f.state)) { acct.err = t("badState"); renderAcct(); return; }
+    if (f.zip && !/^\d{5}$/.test(f.zip)) { acct.err = t("zipErr"); renderAcct(); return; }
+  }
+  acct.busy = true; renderAcct();
+  let res;
+  try {
+    if (act === "signin") res = await sb.auth.signInWithPassword({email, password: pw});
+    else if (act === "signup") res = await sb.auth.signUp({email, password: pw, options: {data: {full_name: f.name.trim(), lang}}});
+    else if (act === "forgot") res = await sb.auth.resetPasswordForEmail(email, {redirectTo: location.origin + location.pathname});
+    else if (act === "reset") res = await sb.auth.updateUser({password: pw});
+    else if (act === "profile") res = await sb.from("profiles").update({full_name: f.full_name.trim() || null, phone: f.phone.trim() || null, address: f.address.trim() || null, city: f.city.trim() || null, state: f.state || null, zip: f.zip || null}).eq("id", acct.user.id).select().maybeSingle();
+  } catch (err) { res = {error: err}; }
+  acct.busy = false;
+  if (res.error) { acct.err = authErr(res.error); renderAcct(); focusAcct(); return; }
+  delete f.password;
+  if (act === "forgot") { acct.msg = t("resetSent"); renderAcct(); return; }
+  if (act === "profile") { acct.profile = res.data || acct.profile; acct.msg = t("saved"); updateAcctBtn(); renderAcct(); return; }
+  if (act === "signup" && !res.data.session) { acct.view = "signin"; acct.msg = t("checkEmail"); renderAcct(); return; }
+  acct.user = (res.data && (res.data.user || (res.data.session && res.data.session.user))) || acct.user;
+  await loadProfile(); updateAcctBtn();
+  if (acct.returnTo === "checkout") { acct.returnTo = null; closeAll(true); coData.email = ""; openCheckout(); return; }
+  acct.view = "account"; acct.tab = "orders";
+  acct.msg = act === "reset" ? t("pwUpdated") : act === "signup" ? t("welcome") : "";
+  renderAcct(); refreshOrders();
+});
+if (sb) {
+  sb.auth.onAuthStateChange((ev, session) => {
+    acct.user = session ? session.user : null;
+    /* Supabase asks not to await its own calls inside this callback, so defer the work */
+    setTimeout(async () => {
+      await loadProfile(); updateAcctBtn();
+      if (ev === "PASSWORD_RECOVERY") { acct.view = "reset"; acct.err = ""; acct.msg = ""; renderAcct(); openLayer(acm); }
+      if (co.classList.contains("on") && !coDone) renderCheckout();
+    }, 0);
+  });
+}
+
+/* ============================================================ LANGUAGE ============================================================ */
+function applyLang() {
+  document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+  $$("[data-t]").forEach(n => n.textContent = t(n.dataset.t));
+  $$("[data-tp]").forEach(n => n.placeholder = t(n.dataset.tp));
+  $$("[data-ta]").forEach(n => n.setAttribute("aria-label", t(n.dataset.ta)));
+  $$("[data-lang]").forEach(b => { b.classList.toggle("on", b.dataset.lang === lang); b.setAttribute("aria-pressed", b.dataset.lang === lang); });
+  tabsNav.setAttribute("aria-label", lang === "en" ? "Flavors" : "Sabores");
+  tabBtns.forEach((b, i) => b.textContent = FLNAME[lang][ORDER[i]]);
+  layout();
+  setHeroBuy(false);
+  renderKit(); renderReviews();
+  if (qz.classList.contains("on")) renderQuiz();
+  updateAcctBtn();
+  if (acm.classList.contains("on")) renderAcct();
+  renderFilters(); renderGrid();
+  if (pm.classList.contains("on")) renderProduct();
+  if ($("#cart").classList.contains("on")) renderCart();
+  if (co.classList.contains("on")) renderCheckout();
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-lang]"); if (!b || b.dataset.lang === lang) return;
+  lang = b.dataset.lang; localStorage.setItem("vm-lang", lang); zipMsg = ""; couponMsg = ""; applyLang();
+});
+
+setTabs();
+applyLang();
+updateCount();
+})();
+</script>
+</body>
+</html>
