@@ -2,7 +2,7 @@
 
 A bilingual (English / Portuguese) e-commerce concept for a fictional Miami smoothie brand, built with plain HTML, CSS and JavaScript, with real customer accounts powered by Supabase.
 
-**Live demo:** _coming soon_
+**Live demo:** [verde-market.kynex-sites.workers.dev](https://verde-market.kynex-sites.workers.dev)
 
 > Concept project by **KYNEX**. The brand, products and reviews are fictional. Payments are simulated and only public test cards are accepted, so nobody can be charged.
 
@@ -25,7 +25,7 @@ A bilingual (English / Portuguese) e-commerce concept for a fictional Miami smoo
 |---|---|
 | Front end | HTML, CSS, vanilla JavaScript (no framework, no build step) |
 | Accounts and data | [Supabase](https://supabase.com) — Auth + Postgres with Row Level Security |
-| Hosting | Cloudflare Pages |
+| Hosting | Cloudflare (static assets, deployed from GitHub on every push) |
 | Fonts | Poppins and Baloo 2 (Google Fonts) |
 | Product images | AI-generated cut-out sheets, cropped in CSS |
 
@@ -35,7 +35,7 @@ A bilingual (English / Portuguese) e-commerce concept for a fictional Miami smoo
 site/                 everything that is published
   index.html          the whole store (markup, styles and scripts)
   img/                product cut-out sheets and posters
-  _headers            security and cache headers for Cloudflare Pages
+  _headers            security and cache headers for Cloudflare
 supabase/
   schema.sql          tables, Row Level Security policies, grants and functions
 ```
